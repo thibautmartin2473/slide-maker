@@ -1,0 +1,1402 @@
+{
+  "direction": {
+    "id": "c-froide",
+    "nom": "C. Lavande aérée",
+    "principe": "Dépasser la charte vers le froid : la lavande devient une famille de surfaces (pas 50 à 300, comme les pas 1 à 5 de Radix), titres en encre indigo, neutres chauds très discrets, data dans des bleus, sarcelles et prunes ; un seul chaud, l'ambre, réservé aux écarts défavorables et à l'alerte."
+  },
+  "ancres": {
+    "brun": {
+      "hex": "3A322D",
+      "oklch": {
+        "L": 0.32399451539967916,
+        "C": 0.01445325656227024,
+        "H": 54.054262405384726
+      },
+      "pas": "brun.900 et neutre.900"
+    },
+    "beige": {
+      "hex": "F5F2EF",
+      "oklch": {
+        "L": 0.9626253168479564,
+        "C": 0.005145935568874394,
+        "H": 67.76314818111962
+      },
+      "pas": "neutre.50"
+    },
+    "indigo": {
+      "hex": "5E6AB0",
+      "oklch": {
+        "L": 0.5462646238148646,
+        "C": 0.10986349209466999,
+        "H": 274.81685916023343
+      },
+      "pas": "indigo.600"
+    },
+    "lavande": {
+      "hex": "B4BAE2",
+      "oklch": {
+        "L": 0.7975999026133096,
+        "C": 0.05697408314494499,
+        "H": 278.32871031919814
+      },
+      "pas": "lavande.300"
+    }
+  },
+  "methode": "Rampes en OKLCH (11 pas, 50 à 950 ; neutres 12 pas, 25 à 950) : clarté sur une courbe de référence recalée pour passer exactement par l'ancre du site, chroma en cloche autour de L 0,55 sans saut à l'ancre, teinte de l'ancre (léger décalage selon la direction), chroma réduite jusqu'au gamut sRGB. Contraste : WCAG 2.x. Daltonisme : matrices de Machado et al. 2009 (sévérité 1), distance OKLab x 100.",
+  "rampes": {
+    "brun": {
+      "ancre": 900,
+      "hex": {
+        "50": "FCF5F1",
+        "100": "F4EBE5",
+        "200": "E6D9D1",
+        "300": "D0BDB2",
+        "400": "B39D8F",
+        "500": "988072",
+        "600": "7E695B",
+        "700": "67564B",
+        "800": "50443C",
+        "900": "3A322D",
+        "950": "29211C"
+      },
+      "oklch": {
+        "50": {
+          "L": 0.975,
+          "C": 0.009,
+          "H": 52.1
+        },
+        "100": {
+          "L": 0.944,
+          "C": 0.012,
+          "H": 52.2
+        },
+        "200": {
+          "L": 0.894,
+          "C": 0.018,
+          "H": 52.5
+        },
+        "300": {
+          "L": 0.812,
+          "C": 0.026,
+          "H": 53
+        },
+        "400": {
+          "L": 0.711,
+          "C": 0.033,
+          "H": 53.5
+        },
+        "500": {
+          "L": 0.619,
+          "C": 0.036,
+          "H": 54
+        },
+        "600": {
+          "L": 0.538,
+          "C": 0.034,
+          "H": 54.5
+        },
+        "700": {
+          "L": 0.466,
+          "C": 0.028,
+          "H": 54.9
+        },
+        "800": {
+          "L": 0.395,
+          "C": 0.021,
+          "H": 55.3
+        },
+        "900": {
+          "L": 0.324,
+          "C": 0.014,
+          "H": 54.1
+        },
+        "950": {
+          "L": 0.255,
+          "C": 0.015,
+          "H": 56
+        }
+      }
+    },
+    "indigo": {
+      "ancre": 600,
+      "hex": {
+        "50": "F5F6FF",
+        "100": "E8ECFF",
+        "200": "D3DAFF",
+        "300": "B4BFF7",
+        "400": "929EE2",
+        "500": "7582C9",
+        "600": "5E6AB0",
+        "700": "4A5699",
+        "800": "384380",
+        "900": "273166",
+        "950": "171F45"
+      },
+      "oklch": {
+        "50": {
+          "L": 0.975,
+          "C": 0.029,
+          "H": 277.8
+        },
+        "100": {
+          "L": 0.945,
+          "C": 0.039,
+          "H": 277.5
+        },
+        "200": {
+          "L": 0.895,
+          "C": 0.057,
+          "H": 277.1
+        },
+        "300": {
+          "L": 0.815,
+          "C": 0.081,
+          "H": 276.5
+        },
+        "400": {
+          "L": 0.716,
+          "C": 0.1,
+          "H": 275.6
+        },
+        "500": {
+          "L": 0.626,
+          "C": 0.109,
+          "H": 274.9
+        },
+        "600": {
+          "L": 0.546,
+          "C": 0.11,
+          "H": 274.8
+        },
+        "700": {
+          "L": 0.476,
+          "C": 0.109,
+          "H": 273.7
+        },
+        "800": {
+          "L": 0.406,
+          "C": 0.103,
+          "H": 273.1
+        },
+        "900": {
+          "L": 0.335,
+          "C": 0.092,
+          "H": 272.5
+        },
+        "950": {
+          "L": 0.255,
+          "C": 0.073,
+          "H": 271.9
+        }
+      }
+    },
+    "lavande": {
+      "ancre": 300,
+      "hex": {
+        "50": "F5F6FF",
+        "100": "E7EAFF",
+        "200": "D2D7F7",
+        "300": "B4BAE2",
+        "400": "939ACE",
+        "500": "787FBA",
+        "600": "6167A5",
+        "700": "4F548E",
+        "800": "3E4276",
+        "900": "2E315D",
+        "950": "1D1F3F"
+      },
+      "oklch": {
+        "50": {
+          "L": 0.975,
+          "C": 0.023,
+          "H": 278.3
+        },
+        "100": {
+          "L": 0.942,
+          "C": 0.031,
+          "H": 278.3
+        },
+        "200": {
+          "L": 0.886,
+          "C": 0.044,
+          "H": 278.3
+        },
+        "300": {
+          "L": 0.798,
+          "C": 0.057,
+          "H": 278.3
+        },
+        "400": {
+          "L": 0.701,
+          "C": 0.076,
+          "H": 278.3
+        },
+        "500": {
+          "L": 0.614,
+          "C": 0.09,
+          "H": 278.3
+        },
+        "600": {
+          "L": 0.536,
+          "C": 0.096,
+          "H": 278.3
+        },
+        "700": {
+          "L": 0.468,
+          "C": 0.094,
+          "H": 278.3
+        },
+        "800": {
+          "L": 0.4,
+          "C": 0.087,
+          "H": 278.3
+        },
+        "900": {
+          "L": 0.333,
+          "C": 0.077,
+          "H": 278.3
+        },
+        "950": {
+          "L": 0.255,
+          "C": 0.061,
+          "H": 278.3
+        }
+      }
+    },
+    "ciel": {
+      "ancre": null,
+      "hex": {
+        "50": "EFF8FF",
+        "100": "DCF1FF",
+        "200": "C0E3FA",
+        "300": "9BCBEC",
+        "400": "70AED6",
+        "500": "4D93BF",
+        "600": "317CA8",
+        "700": "186690",
+        "800": "005177",
+        "900": "003C5A",
+        "950": "00263C"
+      },
+      "oklch": {
+        "50": {
+          "L": 0.975,
+          "C": 0.025,
+          "H": 238.2
+        },
+        "100": {
+          "L": 0.946,
+          "C": 0.033,
+          "H": 238.2
+        },
+        "200": {
+          "L": 0.898,
+          "C": 0.049,
+          "H": 238.2
+        },
+        "300": {
+          "L": 0.82,
+          "C": 0.069,
+          "H": 238.2
+        },
+        "400": {
+          "L": 0.724,
+          "C": 0.087,
+          "H": 238.2
+        },
+        "500": {
+          "L": 0.637,
+          "C": 0.097,
+          "H": 238.2
+        },
+        "600": {
+          "L": 0.56,
+          "C": 0.1,
+          "H": 238.2
+        },
+        "700": {
+          "L": 0.486,
+          "C": 0.098,
+          "H": 238.2
+        },
+        "800": {
+          "L": 0.413,
+          "C": 0.092,
+          "H": 238.2
+        },
+        "900": {
+          "L": 0.339,
+          "C": 0.081,
+          "H": 238.2
+        },
+        "950": {
+          "L": 0.255,
+          "C": 0.063,
+          "H": 238.2
+        }
+      }
+    },
+    "sarcelle": {
+      "ancre": null,
+      "hex": {
+        "50": "E7FCFA",
+        "100": "D9F4F2",
+        "200": "BFE7E4",
+        "300": "98D1CE",
+        "400": "6BB5B2",
+        "500": "469B98",
+        "600": "268481",
+        "700": "006E6B",
+        "800": "005755",
+        "900": "00413F",
+        "950": "002928"
+      },
+      "oklch": {
+        "50": {
+          "L": 0.975,
+          "C": 0.021,
+          "H": 191.9
+        },
+        "100": {
+          "L": 0.946,
+          "C": 0.028,
+          "H": 191.9
+        },
+        "200": {
+          "L": 0.898,
+          "C": 0.041,
+          "H": 191.9
+        },
+        "300": {
+          "L": 0.82,
+          "C": 0.058,
+          "H": 191.9
+        },
+        "400": {
+          "L": 0.724,
+          "C": 0.074,
+          "H": 191.9
+        },
+        "500": {
+          "L": 0.637,
+          "C": 0.082,
+          "H": 191.9
+        },
+        "600": {
+          "L": 0.56,
+          "C": 0.085,
+          "H": 191.9
+        },
+        "700": {
+          "L": 0.486,
+          "C": 0.083,
+          "H": 191.9
+        },
+        "800": {
+          "L": 0.413,
+          "C": 0.078,
+          "H": 191.9
+        },
+        "900": {
+          "L": 0.339,
+          "C": 0.069,
+          "H": 191.9
+        },
+        "950": {
+          "L": 0.255,
+          "C": 0.053,
+          "H": 191.9
+        }
+      }
+    },
+    "ambre": {
+      "ancre": null,
+      "hex": {
+        "50": "FFF5EA",
+        "100": "FFE9D1",
+        "200": "F7D7B4",
+        "300": "E8BB88",
+        "400": "D19958",
+        "500": "B87D2F",
+        "600": "A16500",
+        "700": "855200",
+        "800": "6A4000",
+        "900": "502F00",
+        "950": "341D00"
+      },
+      "oklch": {
+        "50": {
+          "L": 0.975,
+          "C": 0.03,
+          "H": 69.5
+        },
+        "100": {
+          "L": 0.946,
+          "C": 0.041,
+          "H": 69.5
+        },
+        "200": {
+          "L": 0.898,
+          "C": 0.059,
+          "H": 69.5
+        },
+        "300": {
+          "L": 0.82,
+          "C": 0.084,
+          "H": 69.5
+        },
+        "400": {
+          "L": 0.724,
+          "C": 0.106,
+          "H": 69.5
+        },
+        "500": {
+          "L": 0.637,
+          "C": 0.118,
+          "H": 69.5
+        },
+        "600": {
+          "L": 0.559,
+          "C": 0.122,
+          "H": 69.5
+        },
+        "700": {
+          "L": 0.486,
+          "C": 0.119,
+          "H": 69.5
+        },
+        "800": {
+          "L": 0.412,
+          "C": 0.112,
+          "H": 69.5
+        },
+        "900": {
+          "L": 0.339,
+          "C": 0.099,
+          "H": 69.5
+        },
+        "950": {
+          "L": 0.255,
+          "C": 0.077,
+          "H": 69.5
+        }
+      }
+    },
+    "sapin": {
+      "ancre": null,
+      "hex": {
+        "50": "ECFBF2",
+        "100": "DFF3E7",
+        "200": "C8E6D4",
+        "300": "A6D0B8",
+        "400": "7FB497",
+        "500": "609A7B",
+        "600": "478364",
+        "700": "326D50",
+        "800": "20573D",
+        "900": "12422C",
+        "950": "072A1A"
+      },
+      "oklch": {
+        "50": {
+          "L": 0.975,
+          "C": 0.02,
+          "H": 159.8
+        },
+        "100": {
+          "L": 0.946,
+          "C": 0.027,
+          "H": 159.8
+        },
+        "200": {
+          "L": 0.898,
+          "C": 0.039,
+          "H": 159.8
+        },
+        "300": {
+          "L": 0.821,
+          "C": 0.055,
+          "H": 159.8
+        },
+        "400": {
+          "L": 0.724,
+          "C": 0.07,
+          "H": 159.8
+        },
+        "500": {
+          "L": 0.637,
+          "C": 0.077,
+          "H": 159.8
+        },
+        "600": {
+          "L": 0.56,
+          "C": 0.08,
+          "H": 159.8
+        },
+        "700": {
+          "L": 0.486,
+          "C": 0.079,
+          "H": 159.8
+        },
+        "800": {
+          "L": 0.413,
+          "C": 0.074,
+          "H": 159.8
+        },
+        "900": {
+          "L": 0.339,
+          "C": 0.065,
+          "H": 159.8
+        },
+        "950": {
+          "L": 0.255,
+          "C": 0.05,
+          "H": 159.8
+        }
+      }
+    },
+    "brique": {
+      "ancre": null,
+      "hex": {
+        "50": "FFF4F3",
+        "100": "FFE7E4",
+        "200": "FFD0CC",
+        "300": "F9AEA7",
+        "400": "E48981",
+        "500": "CC6A63",
+        "600": "B4514C",
+        "700": "9B3C38",
+        "800": "802928",
+        "900": "631A19",
+        "950": "420D0D"
+      },
+      "oklch": {
+        "50": {
+          "L": 0.975,
+          "C": 0.033,
+          "H": 25.1
+        },
+        "100": {
+          "L": 0.946,
+          "C": 0.043,
+          "H": 25.1
+        },
+        "200": {
+          "L": 0.898,
+          "C": 0.063,
+          "H": 25.1
+        },
+        "300": {
+          "L": 0.82,
+          "C": 0.09,
+          "H": 25.1
+        },
+        "400": {
+          "L": 0.724,
+          "C": 0.113,
+          "H": 25.1
+        },
+        "500": {
+          "L": 0.637,
+          "C": 0.126,
+          "H": 25.1
+        },
+        "600": {
+          "L": 0.559,
+          "C": 0.13,
+          "H": 25.1
+        },
+        "700": {
+          "L": 0.486,
+          "C": 0.128,
+          "H": 25.1
+        },
+        "800": {
+          "L": 0.412,
+          "C": 0.12,
+          "H": 25.1
+        },
+        "900": {
+          "L": 0.339,
+          "C": 0.105,
+          "H": 25.1
+        },
+        "950": {
+          "L": 0.255,
+          "C": 0.082,
+          "H": 25.1
+        }
+      }
+    },
+    "prune": {
+      "ancre": null,
+      "hex": {
+        "50": "FFF2FD",
+        "100": "FBE6F8",
+        "200": "F1D2ED",
+        "300": "DEB5DA",
+        "400": "C592C0",
+        "500": "AC75A7",
+        "600": "955E90",
+        "700": "7E4A79",
+        "800": "663762",
+        "900": "4E264B",
+        "950": "331631"
+      },
+      "oklch": {
+        "50": {
+          "L": 0.975,
+          "C": 0.025,
+          "H": 330.1
+        },
+        "100": {
+          "L": 0.946,
+          "C": 0.033,
+          "H": 330.1
+        },
+        "200": {
+          "L": 0.898,
+          "C": 0.048,
+          "H": 330.1
+        },
+        "300": {
+          "L": 0.82,
+          "C": 0.068,
+          "H": 330.1
+        },
+        "400": {
+          "L": 0.724,
+          "C": 0.087,
+          "H": 330.1
+        },
+        "500": {
+          "L": 0.637,
+          "C": 0.096,
+          "H": 330.1
+        },
+        "600": {
+          "L": 0.56,
+          "C": 0.099,
+          "H": 330.1
+        },
+        "700": {
+          "L": 0.486,
+          "C": 0.098,
+          "H": 330.1
+        },
+        "800": {
+          "L": 0.413,
+          "C": 0.091,
+          "H": 330.1
+        },
+        "900": {
+          "L": 0.339,
+          "C": 0.081,
+          "H": 330.1
+        },
+        "950": {
+          "L": 0.255,
+          "C": 0.063,
+          "H": 330.1
+        }
+      }
+    },
+    "neutre": {
+      "ancre": {
+        "50": "F5F2EF",
+        "900": "3A322D"
+      },
+      "hex": {
+        "25": "FCFBF9",
+        "50": "F5F2EF",
+        "100": "E8E6E3",
+        "200": "D8D5D2",
+        "300": "C2BDB8",
+        "400": "A29D99",
+        "500": "847F7B",
+        "600": "6D6864",
+        "700": "5A544F",
+        "800": "49423D",
+        "900": "3A322D",
+        "950": "26201C"
+      },
+      "oklch": {
+        "25": {
+          "L": 0.988,
+          "C": 0.003,
+          "H": 71.6
+        },
+        "50": {
+          "L": 0.963,
+          "C": 0.005,
+          "H": 67.8
+        },
+        "100": {
+          "L": 0.925,
+          "C": 0.005,
+          "H": 70.6
+        },
+        "200": {
+          "L": 0.875,
+          "C": 0.005,
+          "H": 69.8
+        },
+        "300": {
+          "L": 0.8,
+          "C": 0.009,
+          "H": 68.7
+        },
+        "400": {
+          "L": 0.7,
+          "C": 0.009,
+          "H": 67.2
+        },
+        "500": {
+          "L": 0.6,
+          "C": 0.009,
+          "H": 65.6
+        },
+        "600": {
+          "L": 0.52,
+          "C": 0.009,
+          "H": 64.4
+        },
+        "700": {
+          "L": 0.45,
+          "C": 0.012,
+          "H": 63.3
+        },
+        "800": {
+          "L": 0.385,
+          "C": 0.012,
+          "H": 62.3
+        },
+        "900": {
+          "L": 0.324,
+          "C": 0.014,
+          "H": 54.1
+        },
+        "950": {
+          "L": 0.25,
+          "C": 0.012,
+          "H": 60.2
+        }
+      }
+    }
+  },
+  "roles": {
+    "fond": {
+      "jeton": "neutre.25",
+      "hex": "FCFBF9"
+    },
+    "surface": {
+      "jeton": "lavande.50",
+      "hex": "F5F6FF"
+    },
+    "surface-2": {
+      "jeton": "lavande.100",
+      "hex": "E7EAFF"
+    },
+    "texte-1": {
+      "jeton": "neutre.900",
+      "hex": "3A322D"
+    },
+    "titre": {
+      "jeton": "indigo.900",
+      "hex": "273166"
+    },
+    "texte-2": {
+      "jeton": "neutre.700",
+      "hex": "5A544F"
+    },
+    "texte-3": {
+      "jeton": "neutre.600",
+      "hex": "6D6864"
+    },
+    "filet": {
+      "jeton": "lavande.200",
+      "hex": "D2D7F7"
+    },
+    "filet-fort": {
+      "jeton": "indigo.900",
+      "hex": "273166"
+    },
+    "accent": {
+      "jeton": "indigo.600",
+      "hex": "5E6AB0"
+    },
+    "accent-texte": {
+      "jeton": "indigo.700",
+      "hex": "4A5699"
+    },
+    "accent-pale": {
+      "jeton": "lavande.100",
+      "hex": "E7EAFF"
+    },
+    "accent-sur-sombre": {
+      "jeton": "lavande.200",
+      "hex": "D2D7F7"
+    },
+    "panneau": {
+      "jeton": "lavande.300",
+      "hex": "B4BAE2"
+    },
+    "texte-sur-panneau": {
+      "jeton": "indigo.950",
+      "hex": "171F45"
+    },
+    "donnee-contexte": {
+      "jeton": "lavande.300",
+      "hex": "B4BAE2"
+    },
+    "donnee-fantome": {
+      "jeton": "lavande.100",
+      "hex": "E7EAFF"
+    },
+    "reference": {
+      "jeton": "ambre.700",
+      "hex": "855200"
+    },
+    "prevision": {
+      "jeton": "lavande.300",
+      "hex": "B4BAE2"
+    }
+  },
+  "data": {
+    "categorielle": [
+      {
+        "jeton": "indigo.600",
+        "hex": "5E6AB0",
+        "role": "série principale",
+        "contraste_sur_fond": 4.88,
+        "regle": "objet graphique lisible seul (3:1 au moins)"
+      },
+      {
+        "jeton": "ambre.400",
+        "hex": "D19958",
+        "role": "deuxième série",
+        "contraste_sur_fond": 2.41,
+        "regle": "sous 3:1 sur le fond : aplat large avec étiquette directe, ou contour texte-2"
+      },
+      {
+        "jeton": "sarcelle.800",
+        "hex": "005755",
+        "role": "troisième série",
+        "contraste_sur_fond": 8.14,
+        "regle": "objet graphique lisible seul (3:1 au moins)"
+      },
+      {
+        "jeton": "ciel.300",
+        "hex": "9BCBEC",
+        "role": "quatrième série",
+        "contraste_sur_fond": 1.67,
+        "regle": "sous 3:1 sur le fond : aplat large avec étiquette directe, ou contour texte-2"
+      },
+      {
+        "jeton": "lavande.400",
+        "hex": "939ACE",
+        "role": "cinquième série",
+        "contraste_sur_fond": 2.62,
+        "regle": "sous 3:1 sur le fond : aplat large avec étiquette directe, ou contour texte-2"
+      },
+      {
+        "jeton": "brun.500",
+        "hex": "988072",
+        "role": "sixième série",
+        "contraste_sur_fond": 3.58,
+        "regle": "objet graphique lisible seul (3:1 au moins)"
+      },
+      {
+        "jeton": "indigo.900",
+        "hex": "273166",
+        "role": "septième série",
+        "contraste_sur_fond": 11.82,
+        "regle": "objet graphique lisible seul (3:1 au moins)"
+      },
+      {
+        "jeton": "brun.900",
+        "hex": "3A322D",
+        "role": "huitième série",
+        "contraste_sur_fond": 12.13,
+        "regle": "objet graphique lisible seul (3:1 au moins)"
+      }
+    ],
+    "ordre": "dans l'ordre de la liste ; 4 séries au plus sur une slide, au-delà regrouper en « autres »",
+    "controle_daltonisme_8": {
+      "normal": {
+        "min": 10.6,
+        "pair": [
+          6,
+          7
+        ]
+      },
+      "deuteranopie": {
+        "min": 9.2,
+        "pair": [
+          2,
+          7
+        ]
+      },
+      "protanopie": {
+        "min": 10.5,
+        "pair": [
+          6,
+          7
+        ]
+      },
+      "tritanopie": {
+        "min": 7.4,
+        "pair": [
+          6,
+          7
+        ]
+      }
+    },
+    "controle_daltonisme_4": {
+      "normal": {
+        "min": 18.2,
+        "pair": [
+          0,
+          2
+        ]
+      },
+      "deuteranopie": {
+        "min": 15.6,
+        "pair": [
+          0,
+          2
+        ]
+      },
+      "protanopie": {
+        "min": 15.7,
+        "pair": [
+          0,
+          2
+        ]
+      }
+    },
+    "sequentielle": [
+      {
+        "jeton": "lavande.100",
+        "hex": "E7EAFF"
+      },
+      {
+        "jeton": "lavande.200",
+        "hex": "D2D7F7"
+      },
+      {
+        "jeton": "lavande.300",
+        "hex": "B4BAE2"
+      },
+      {
+        "jeton": "lavande.400",
+        "hex": "939ACE"
+      },
+      {
+        "jeton": "lavande.600",
+        "hex": "6167A5"
+      },
+      {
+        "jeton": "lavande.800",
+        "hex": "3E4276"
+      },
+      {
+        "jeton": "lavande.950",
+        "hex": "1D1F3F"
+      }
+    ],
+    "divergente": {
+      "defavorable": [
+        {
+          "jeton": "ambre.800",
+          "hex": "6A4000"
+        },
+        {
+          "jeton": "ambre.600",
+          "hex": "A16500"
+        },
+        {
+          "jeton": "ambre.400",
+          "hex": "D19958"
+        },
+        {
+          "jeton": "ambre.200",
+          "hex": "F7D7B4"
+        }
+      ],
+      "neutre": {
+        "jeton": "neutre.100",
+        "hex": "E8E6E3"
+      },
+      "favorable": [
+        {
+          "jeton": "indigo.200",
+          "hex": "D3DAFF"
+        },
+        {
+          "jeton": "indigo.400",
+          "hex": "929EE2"
+        },
+        {
+          "jeton": "indigo.600",
+          "hex": "5E6AB0"
+        },
+        {
+          "jeton": "indigo.800",
+          "hex": "384380"
+        }
+      ]
+    },
+    "divergente_ecart_simule": {
+      "deuteranopie": 22.8,
+      "protanopie": 21.8
+    },
+    "etats": {
+      "positif": {
+        "famille": "sapin",
+        "plein": {
+          "jeton": "sapin.600",
+          "hex": "478364"
+        },
+        "fond": {
+          "jeton": "sapin.100",
+          "hex": "DFF3E7"
+        },
+        "texte": {
+          "jeton": "sapin.800",
+          "hex": "20573D"
+        },
+        "contraste_texte_sur_fond": 7.27,
+        "contraste_texte_sur_fond_page": 8.15,
+        "contraste_plein_sur_fond_page": 4.32
+      },
+      "negatif": {
+        "famille": "brique",
+        "plein": {
+          "jeton": "brique.600",
+          "hex": "B4514C"
+        },
+        "fond": {
+          "jeton": "brique.100",
+          "hex": "FFE7E4"
+        },
+        "texte": {
+          "jeton": "brique.800",
+          "hex": "802928"
+        },
+        "contraste_texte_sur_fond": 7.86,
+        "contraste_texte_sur_fond_page": 8.96,
+        "contraste_plein_sur_fond_page": 4.81
+      },
+      "alerte": {
+        "famille": "ambre",
+        "plein": {
+          "jeton": "ambre.600",
+          "hex": "A16500"
+        },
+        "fond": {
+          "jeton": "ambre.100",
+          "hex": "FFE9D1"
+        },
+        "texte": {
+          "jeton": "ambre.800",
+          "hex": "6A4000"
+        },
+        "contraste_texte_sur_fond": 7.6,
+        "contraste_texte_sur_fond_page": 8.65,
+        "contraste_plein_sur_fond_page": 4.64
+      },
+      "info": {
+        "famille": "ciel",
+        "plein": {
+          "jeton": "ciel.600",
+          "hex": "317CA8"
+        },
+        "fond": {
+          "jeton": "ciel.100",
+          "hex": "DCF1FF"
+        },
+        "texte": {
+          "jeton": "ciel.800",
+          "hex": "005177"
+        },
+        "contraste_texte_sur_fond": 7.4,
+        "contraste_texte_sur_fond_page": 8.31,
+        "contraste_plein_sur_fond_page": 4.43
+      }
+    }
+  },
+  "contrastes": [
+    {
+      "texte": "texte-1",
+      "fond": "fond",
+      "texte_hex": "3A322D",
+      "fond_hex": "FCFBF9",
+      "ratio": 12.13,
+      "seuil": 4.5,
+      "usage": "texte courant, titres",
+      "ok": true
+    },
+    {
+      "texte": "texte-2",
+      "fond": "fond",
+      "texte_hex": "5A544F",
+      "fond_hex": "FCFBF9",
+      "ratio": 7.21,
+      "seuil": 4.5,
+      "usage": "sous-titres, étiquettes",
+      "ok": true
+    },
+    {
+      "texte": "texte-3",
+      "fond": "fond",
+      "texte_hex": "6D6864",
+      "fond_hex": "FCFBF9",
+      "ratio": 5.32,
+      "seuil": 4.5,
+      "usage": "notes, sources, axes",
+      "ok": true
+    },
+    {
+      "texte": "accent-texte",
+      "fond": "fond",
+      "texte_hex": "4A5699",
+      "fond_hex": "FCFBF9",
+      "ratio": 6.59,
+      "seuil": 4.5,
+      "usage": "mot ou chiffre d'accent en petit corps",
+      "ok": true
+    },
+    {
+      "texte": "accent",
+      "fond": "fond",
+      "texte_hex": "5E6AB0",
+      "fond_hex": "FCFBF9",
+      "ratio": 4.88,
+      "seuil": 3,
+      "usage": "chiffre-héros et barre d'accent (grand corps, objet graphique)",
+      "ok": true
+    },
+    {
+      "texte": "texte-1",
+      "fond": "surface",
+      "texte_hex": "3A322D",
+      "fond_hex": "F5F6FF",
+      "ratio": 11.65,
+      "seuil": 4.5,
+      "usage": "texte sur surface",
+      "ok": true
+    },
+    {
+      "texte": "texte-1",
+      "fond": "accent-pale",
+      "texte_hex": "3A322D",
+      "fond_hex": "E7EAFF",
+      "ratio": 10.52,
+      "seuil": 4.5,
+      "usage": "texte sur bandeau de conclusion",
+      "ok": true
+    },
+    {
+      "texte": "accent-texte",
+      "fond": "accent-pale",
+      "texte_hex": "4A5699",
+      "fond_hex": "E7EAFF",
+      "ratio": 5.71,
+      "seuil": 4.5,
+      "usage": "libellé du bandeau",
+      "ok": true
+    },
+    {
+      "texte": "texte-2",
+      "fond": "surface-2",
+      "texte_hex": "5A544F",
+      "fond_hex": "E7EAFF",
+      "ratio": 6.25,
+      "seuil": 4.5,
+      "usage": "en-tête de tableau sur aplat",
+      "ok": true
+    },
+    {
+      "texte": "reference",
+      "fond": "fond",
+      "texte_hex": "855200",
+      "fond_hex": "FCFBF9",
+      "ratio": 6.34,
+      "seuil": 4.5,
+      "usage": "libellé de seuil",
+      "ok": true
+    },
+    {
+      "texte": "titre",
+      "fond": "fond",
+      "texte_hex": "273166",
+      "fond_hex": "FCFBF9",
+      "ratio": 11.82,
+      "seuil": 4.5,
+      "usage": "titres en encre indigo",
+      "ok": true
+    },
+    {
+      "texte": "texte-sur-panneau",
+      "fond": "panneau",
+      "texte_hex": "171F45",
+      "fond_hex": "B4BAE2",
+      "ratio": 8.39,
+      "seuil": 4.5,
+      "usage": "texte sur aplat lavande (intercalaire)",
+      "ok": true
+    },
+    {
+      "texte": "titre",
+      "fond": "surface",
+      "texte_hex": "273166",
+      "fond_hex": "F5F6FF",
+      "ratio": 11.36,
+      "seuil": 4.5,
+      "usage": "titre sur surface lavande",
+      "ok": true
+    },
+    {
+      "texte": "texte-2",
+      "fond": "surface",
+      "texte_hex": "5A544F",
+      "fond_hex": "F5F6FF",
+      "ratio": 6.93,
+      "seuil": 4.5,
+      "usage": "texte secondaire sur surface lavande",
+      "ok": true
+    },
+    {
+      "texte": "fond",
+      "fond": "accent",
+      "texte_hex": "FCFBF9",
+      "fond_hex": "5E6AB0",
+      "ratio": 4.88,
+      "seuil": 4.5,
+      "usage": "texte clair sur aplat indigo",
+      "ok": true
+    }
+  ],
+  "typographie": {
+    "familles": {
+      "titre": "Source Serif 4 (600, nom PowerPoint « Source Serif 4 SemiBold »)",
+      "texte": "IBM Plex Sans (400, 500, 600)",
+      "repli": "Georgia et Arial"
+    },
+    "chiffres": "Chiffres tabulaires par défaut dans les deux familles (chasse des 10 chiffres identique, mesurée dans les fichiers installés : 0,600 em en IBM Plex Sans 400, 500 et 600 ; 0,507 em en Source Serif 4 SemiBold). Colonnes de chiffres alignées à droite ; pas de chiffre serif en chiffre-héros (goût du 2026-10-13) : Plex Sans 500.",
+    "ecran": {
+      "usage": "lu à l'écran ou envoyé (16:9, 13,33 x 7,5 in)",
+      "niveaux": [
+        {
+          "role": "hero",
+          "police": "IBM Plex Sans Medium",
+          "pt": 44,
+          "interligne": 0.9,
+          "approche": -0.5
+        },
+        {
+          "role": "titre",
+          "police": "Source Serif 4 SemiBold",
+          "pt": 24,
+          "interligne": 0.98,
+          "approche": 0
+        },
+        {
+          "role": "intertitre",
+          "police": "IBM Plex Sans SemiBold",
+          "pt": 13,
+          "interligne": 1.1,
+          "approche": 0
+        },
+        {
+          "role": "corps",
+          "police": "IBM Plex Sans",
+          "pt": 12,
+          "interligne": 1.2,
+          "approche": 0
+        },
+        {
+          "role": "donnee",
+          "police": "IBM Plex Sans",
+          "pt": 11,
+          "interligne": 1.1,
+          "approche": 0
+        },
+        {
+          "role": "etiquette",
+          "police": "IBM Plex Sans Medium",
+          "pt": 10,
+          "interligne": 1.1,
+          "approche": 0.2
+        },
+        {
+          "role": "note",
+          "police": "IBM Plex Sans",
+          "pt": 10,
+          "interligne": 1.15,
+          "approche": 0
+        }
+      ]
+    },
+    "projection": {
+      "usage": "projeté devant un dirigeant (même canevas)",
+      "niveaux": [
+        {
+          "role": "hero",
+          "police": "IBM Plex Sans Medium",
+          "pt": 60,
+          "interligne": 0.9,
+          "approche": -0.5
+        },
+        {
+          "role": "titre",
+          "police": "Source Serif 4 SemiBold",
+          "pt": 30,
+          "interligne": 0.98,
+          "approche": 0
+        },
+        {
+          "role": "intertitre",
+          "police": "IBM Plex Sans SemiBold",
+          "pt": 16,
+          "interligne": 1.1,
+          "approche": 0
+        },
+        {
+          "role": "corps",
+          "police": "IBM Plex Sans",
+          "pt": 16,
+          "interligne": 1.2,
+          "approche": 0
+        },
+        {
+          "role": "donnee",
+          "police": "IBM Plex Sans",
+          "pt": 14,
+          "interligne": 1.1,
+          "approche": 0
+        },
+        {
+          "role": "etiquette",
+          "police": "IBM Plex Sans Medium",
+          "pt": 12,
+          "interligne": 1.1,
+          "approche": 0.2
+        },
+        {
+          "role": "note",
+          "police": "IBM Plex Sans",
+          "pt": 10,
+          "interligne": 1.15,
+          "approche": 0
+        }
+      ]
+    },
+    "regles": [
+      "Pas de capitales de corps ; libellés en casse de phrase.",
+      "Rapport titre / corps : 2 à l'écran, 1,9 en projection.",
+      "Plancher absolu 10 pt (notes et sources)."
+    ]
+  }
+}

@@ -6,8 +6,8 @@ Neutre ne veut pas dire fade : pas de marque, mais **toutes** les décisions que
 
 Chaque palette = **noir chaud** + 5-6 neutres + **1 accent** (et sa teinte claire) + couleurs data à rôle fixe. Règle d'usage (habitude 4 des [principes](principes.md)) : l'accent couvre moins de 15 % de l'aire de la slide ; toute autre couleur a un rôle écrit ci-dessous.
 
-### `ciceria` (défaut, voir [themes.md](themes.md))
-Brun chaud, beige, un seul accent indigo qui désigne. Les codes sont dans `themes.md` et dans `THEMES` de `lib.js`.
+### `ciceria`, `ciceria-contraste`, `ciceria-lavande` (défaut : `ciceria`, voir [themes.md](themes.md))
+Brun chaud, beige, un seul accent indigo qui désigne. Les palettes sont **tirées des jetons** `references/chartes/*.json` (rampes OKLCH, palette catégorielle de 8, séquentielle, états positif et négatif, contrastes mesurés) et lues par `lib.js` : `ctx.T.cat` pour les séries multiples dans l'ordre, `ctx.T.seq` pour une échelle, `ctx.T.pos` et `ctx.T.neg` pour les signes. Table rôle par rôle dans `themes.md`.
 
 ### `encre` (sobre, neutre quand aucune charte n'est demandée)
 Logique Bain, Kearney, Morgan Stanley : tout en gris, un seul vermillon qui désigne.
@@ -150,7 +150,7 @@ Rapports-clés : titre sur corps environ 2,2 ; héros sur libellé environ 3 à 
 - Bordures **horizontales seules** 0,5 pt `n5` ; aucune bordure verticale.
 - En-tête : 9 à 10 pt semi-gras `n2`, filet plus marqué dessous (1 pt `n3`), ou bandeau plein `panel` ou `ink` à texte blanc.
 - Chiffres alignés à droite, en police de corps ; une colonne = une unité.
-- Marge de cellule en **points, 1 ou plus** : une valeur inférieure à 1 est lue en pouces et fait exploser le tableau.
+- Marge de cellule en **points entiers, 1 ou plus** : pptxgenjs 3.12 lit le tableau `margin` en points si sa première valeur est supérieure ou égale à 1, sinon **toutes** les valeurs en pouces (une marge de 0,5 devient un demi-pouce et fait exploser le tableau). Toujours `margin: [2, 4, 2, 4]`, jamais `[0.5, 4, 0.5, 4]`.
 - Mise en évidence : **une** ligne ou **une** cellule (fond `accentLight` ou cadre pointillé accent posé par-dessus en `addShape`).
 - Tableau sous un graphique : `colW` = largeur de la zone de tracé divisée par le nombre de barres, x = x de la zone de tracé (move [table-au-pas](moves/table-au-pas.md)).
 

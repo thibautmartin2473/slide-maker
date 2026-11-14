@@ -4,7 +4,7 @@ Une skill pour Claude qui fabrique des présentations PowerPoint de niveau conse
 Vous décrivez votre besoin (point de trésorerie, budget, comité), Claude vous pose les questions de cadrage, vous fait valider le **plan des titres**, puis produit un fichier `.pptx` natif dont tous les graphiques restent modifiables dans PowerPoint.
 Elle relit aussi un deck existant et rend la liste des corrections, slide par slide.
 
-Thème par défaut : charte de Ciceria Conseil (brun, beige, indigo, polices Source Serif 4 et IBM Plex Sans). Un thème neutre est fourni, et on peut ajouter le sien.
+Trois chartes Ciceria Conseil au choix (brun, beige, indigo, polices Source Serif 4 et IBM Plex Sans) : `ciceria` éditoriale par défaut, `ciceria-contraste` à panneau brun presque noir, `ciceria-lavande` à surfaces lavande. Un thème neutre est fourni, et on peut ajouter le sien. La même direction visuelle s'applique à tout document Word ou PowerPoint du cabinet (lettre de mission, proposition, rapport).
 
 ## Installation pas à pas (sans coder)
 
@@ -45,18 +45,19 @@ Plus la demande dit **qui décide quoi** et **quelle est la réponse en une phra
 4. **Le fichier PowerPoint natif**, graphiques modifiables, aux couleurs et polices de la charte.
 5. **Une relecture chiffrée** : titres contre graphiques, unités, périodes, sources, tailles de texte. Vous recevez la **liste des corrections par slide** et une section « Ce que je n'ai pas pu vérifier ». Un chiffre sans source bloque la livraison.
 
-Pour voir ce que la méthode change, ouvrez d'abord `exemple/demo-ciceria.pptx` (3 slides) :
-- un comparatif de Claude sans méthode et de Claude avec slide-maker ;
-- la même prévision de trésorerie faite des deux façons ;
-- une analyse dense au niveau attendu.
-Le script est `slide-maker/tools/demo-ciceria.js`. Un deck complet de 7 slides (PME fictive, mode lecture) est aussi fourni dans `exemple/exemple.pptx`, avec son script `slide-maker/tools/exemple.js`.
+Pour voir ce que la méthode change, ouvrez d'abord `exemple/demo-ciceria.pptx` (11 slides) :
+- la méthode : Claude sans méthode et Claude avec slide-maker, puis la même prévision de trésorerie faite des deux façons ;
+- huit analyses au niveau attendu, chacune avec un titre qui tranche, un graphique, une lecture numérotée et une recommandation datée et chiffrée : trésorerie, tableau de bord, marge par famille, dossier bancaire, clôture mensuelle, valeur d'une reprise, proposition d'intervention, synthèse des décisions ;
+- les trois chartes côte à côte, sur la même slide.
+Le script est `slide-maker/tools/demo-ciceria.js` (`--theme ciceria-contraste` pour le refaire dans une autre charte). Un deck complet de 7 slides (PME fictive, mode lecture) est aussi fourni dans `exemple/exemple.pptx`, avec son script `slide-maker/tools/exemple.js`.
 
 Au premier usage, Claude demande votre lettre de mission type, pour connaître l'étendue de vos missions et n'en promettre aucune hors périmètre.
 
 ## Votre charte et votre logo
 
-- **Charte par défaut :** `ciceria`. Les couleurs, les polices et leur mode d'emploi sont dans `slide-maker/references/themes.md`.
+- **Charte :** `ciceria` par défaut ; `ciceria-contraste` (deck projeté, comité) et `ciceria-lavande` (note au dirigeant, suivi récurrent) au choix, en le demandant à Claude. Les couleurs, les polices et quand choisir laquelle : `slide-maker/references/themes.md`.
 - **Logo :** aucun logo n'est fourni dans ce dépôt. Joignez votre fichier `logo.png` (fond transparent de préférence) dans la conversation et demandez à Claude de l'enregistrer sous le nom `logo.png` dans le dossier de travail : il apparaît en bas à droite de chaque slide et sur la couverture.
+- **Proposition commerciale :** un logo figure en haut à droite de chaque slide. Claude vous demande chaque fois lequel (le vôtre ou celui du client à qui s'adresse la proposition) et vous demande le fichier.
 - **Autre charte :** demandez à Claude d'ajouter un thème en donnant vos couleurs (un brun ou gris foncé pour le texte, un fond clair, un seul accent) et vos polices.
 
 ## Limites à connaître
@@ -71,9 +72,9 @@ Au premier usage, Claude demande votre lettre de mission type, pour connaître l
 ```
 slide-maker/            le dossier à zipper et importer dans Claude
   SKILL.md              le protocole de la skill
-  references/           principes, design system, thèmes, choix du graphique, gestes, plans de deck, forme dense, registre
+  references/           principes, design system, thèmes et jetons des trois chartes, choix du graphique, gestes, plans de deck, forme dense, registre
   tools/                bibliothèque de mise en page, lecture du registre, relecture automatique, exemple
-exemple/                les PPTX d'exemple (démo en 3 slides, deck complet) et leurs images
+exemple/                les PPTX d'exemple (démo en 11 slides, deck complet) et leurs images, dont les trois chartes
 LICENSE                 MIT
 ```
 

@@ -329,6 +329,1915 @@
           "decimales": 1
         }
       ]
+    },
+    {
+      "n": 4,
+      "id": "s4",
+      "type": "contenu",
+      "titre": "EBE à fin octobre, 88 k€ sous le budget : indexer les devis sur le prix du chêne dès le 1er décembre protège 49 k€ (E) d'EBE en 2027",
+      "chiffres": [
+        {
+          "id": "tb_budget",
+          "valeur": 386,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "tb_volume",
+          "valeur": -52,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "tb_prix",
+          "valeur": 18,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "tb_chene",
+          "valeur": -41,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "tb_interim",
+          "valeur": -27,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "tb_autres",
+          "valeur": 14,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "tb_reel",
+          "valeur": 298,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "tb_budget + tb_volume + tb_prix + tb_chene + tb_interim + tb_autres",
+          "decimales": 0
+        },
+        {
+          "id": "tb_ecart",
+          "valeur": 88,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "tb_budget - tb_reel",
+          "decimales": 0,
+          "dansTitre": true
+        },
+        {
+          "id": "tb_activite",
+          "valeur": -34,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "tb_volume + tb_prix",
+          "decimales": 0
+        },
+        {
+          "id": "tb_couts",
+          "valeur": -54,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "tb_chene + tb_interim + tb_autres",
+          "decimales": 0
+        },
+        {
+          "id": "tb_hausse",
+          "valeur": 11,
+          "unite": "%",
+          "periode": "mars à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "tb_chantiers",
+          "valeur": 9,
+          "unite": "devis",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "tb_seuil",
+          "valeur": 20,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "tb_an",
+          "valeur": 49,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "-tb_chene * 12 / 10",
+          "decimales": 0,
+          "hypothese": "hausse du chêne stable à +11 %, volume 2027 égal à 2026",
+          "dansTitre": true
+        },
+        {
+          "id": "tb_point",
+          "valeur": 4.5,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "tb_an / tb_hausse",
+          "decimales": 1,
+          "hypothese": "effet proportionnel à la hausse"
+        },
+        {
+          "id": "tb_eco",
+          "valeur": 11,
+          "unite": "k€",
+          "periode": "novembre et décembre 2026",
+          "statut": "E",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "-tb_interim / 5 * 2",
+          "decimales": 0,
+          "hypothese": "coût mensuel moyen de juin à octobre"
+        },
+        {
+          "id": "tb_penalites",
+          "valeur": 15,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Budget 2026 et balance Atelier Gardelle à fin octobre 2026, suivi des achats bois, contrats clients (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "id": "s5",
+      "type": "contenu",
+      "titre": "Marchés publics : ne plus répondre sous 15 % de marge prévue ; ces chantiers font 14 % du CA et ne couvrent pas leurs frais fixes",
+      "chiffres": [
+        {
+          "id": "mg_ca_bout",
+          "valeur": 980,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_ca_hot",
+          "valeur": 720,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_ca_bur",
+          "valeur": 430,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_ca_part",
+          "valeur": 260,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_ca_mp",
+          "valeur": 390,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_tot",
+          "valeur": 2780,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "mg_ca_bout + mg_ca_hot + mg_ca_bur + mg_ca_part + mg_ca_mp",
+          "decimales": 0
+        },
+        {
+          "id": "mg_tx_bout",
+          "valeur": 31,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_tx_hot",
+          "valeur": 27,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_tx_bur",
+          "valeur": 24,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_tx_part",
+          "valeur": 29,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_tx_mp",
+          "valeur": 9,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_fixes",
+          "valeur": 22,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_part",
+          "valeur": 14,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "mg_ca_mp / mg_tot * 100",
+          "decimales": 0,
+          "dansTitre": true
+        },
+        {
+          "id": "mg_seuil",
+          "valeur": 15,
+          "unite": "%",
+          "periode": "décembre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "dansTitre": true
+        },
+        {
+          "id": "mg_h_reel",
+          "valeur": 1450,
+          "unite": "h",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_h_chiffre",
+          "valeur": 1100,
+          "unite": "h",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_h_ecart",
+          "valeur": 32,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "(mg_h_reel / mg_h_chiffre - 1) * 100",
+          "decimales": 0
+        },
+        {
+          "id": "mg_rabais",
+          "valeur": 12,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_hx_bout",
+          "valeur": 4,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_hx_part",
+          "valeur": 6,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_hx_hot",
+          "valeur": 8,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_hx_bur",
+          "valeur": 5,
+          "unite": "%",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "mg_point",
+          "valeur": 3.9,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "mg_ca_mp / 100",
+          "decimales": 1
+        },
+        {
+          "id": "mg_gain",
+          "valeur": 23,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "E",
+          "source": {
+            "libelle": "Analyse des chantiers Atelier Gardelle de janvier à octobre 2026, relevés d'heures, dossiers d'appels d'offres (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "mg_point * (mg_seuil - mg_tx_mp)",
+          "decimales": 0,
+          "hypothese": "mêmes chantiers, marge portée au seuil de 15 %"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "id": "s6",
+      "type": "contenu",
+      "titre": "Ligne de finition, 420 k€ : en crédit-bail sur cinq ans, les annuités restent couvertes au-dessus du seuil bancaire, même si le CA stagne",
+      "chiffres": [
+        {
+          "id": "fi_ca23",
+          "valeur": 3050,
+          "unite": "k€",
+          "periode": "2023",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ca24",
+          "valeur": 3410,
+          "unite": "k€",
+          "periode": "2024",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ca25",
+          "valeur": 3520,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ca26",
+          "valeur": 3330,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ca27",
+          "valeur": 3600,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ca28",
+          "valeur": 3820,
+          "unite": "k€",
+          "periode": "2028",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ebe23",
+          "valeur": 362,
+          "unite": "k€",
+          "periode": "2023",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ebe24",
+          "valeur": 410,
+          "unite": "k€",
+          "periode": "2024",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ebe25",
+          "valeur": 395,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ebe26",
+          "valeur": 340,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ebe27",
+          "valeur": 430,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_ebe28",
+          "valeur": 470,
+          "unite": "k€",
+          "periode": "2028",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_lev23",
+          "valeur": 1.4,
+          "unite": "x",
+          "periode": "2023",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_lev24",
+          "valeur": 1.1,
+          "unite": "x",
+          "periode": "2024",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_lev25",
+          "valeur": 0.9,
+          "unite": "x",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_lev26",
+          "valeur": 1.2,
+          "unite": "x",
+          "periode": "2026",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_lev27",
+          "valeur": 2.1,
+          "unite": "x",
+          "periode": "2027",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_lev28",
+          "valeur": 1.7,
+          "unite": "x",
+          "periode": "2028",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_cov23",
+          "valeur": 2.6,
+          "unite": "x",
+          "periode": "2023",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_cov24",
+          "valeur": 2.9,
+          "unite": "x",
+          "periode": "2024",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_cov25",
+          "valeur": 3,
+          "unite": "x",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Liasses fiscales 2023 à 2025",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_cov26",
+          "valeur": 2.4,
+          "unite": "x",
+          "periode": "2026",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_cov27",
+          "valeur": 1.7,
+          "unite": "x",
+          "periode": "2027",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_cov28",
+          "valeur": 1.9,
+          "unite": "x",
+          "periode": "2028",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_invest",
+          "valeur": 420,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "dansTitre": true
+        },
+        {
+          "id": "fi_recul",
+          "valeur": 5,
+          "unite": "%",
+          "periode": "2026",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "calcul": "(1 - fi_ca26 / fi_ca25) * 100",
+          "decimales": 0
+        },
+        {
+          "id": "fi_delta",
+          "valeur": 90,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "P",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "calcul": "fi_ebe27 - fi_ebe26",
+          "decimales": 0
+        },
+        {
+          "id": "fi_clause",
+          "valeur": 49,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "calcul": "tb_an",
+          "decimales": 0,
+          "hypothese": "voir slide 4"
+        },
+        {
+          "id": "fi_sans",
+          "valeur": 381,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "calcul": "fi_ebe27 - fi_clause",
+          "decimales": 0
+        },
+        {
+          "id": "fi_plafond",
+          "valeur": 3,
+          "unite": "x",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          }
+        },
+        {
+          "id": "fi_seuil",
+          "valeur": 1.2,
+          "unite": "x",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "fi_stagne",
+          "valeur": 1.3,
+          "unite": "x",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1,
+          "hypothese": "CA 2027 égal au CA 2026, taux d'EBE de 2026"
+        },
+        {
+          "id": "fi_pret",
+          "valeur": 1.9,
+          "unite": "x",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "prévisionnel de la direction du 06/11/2026, devis de la ligne, conditions de la banque (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-06"
+          },
+          "decimales": 1,
+          "hypothese": "prêt amortissable sur 7 ans au taux indicatif de la banque"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "id": "s7",
+      "type": "contenu",
+      "titre": "Clôture mensuelle : passer de J+25 à J+8 d'ici mars demande quatre chantiers à 2,4 k€ par an, ni embauche ni nouveau logiciel comptable",
+      "chiffres": [
+        {
+          "id": "cl_avant",
+          "valeur": 25,
+          "unite": "jours",
+          "periode": "clôture d'octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          },
+          "dansTitre": true
+        },
+        {
+          "id": "cl_ocr",
+          "valeur": -6,
+          "unite": "jours",
+          "periode": "clôture d'octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          }
+        },
+        {
+          "id": "cl_banque",
+          "valeur": -4,
+          "unite": "jours",
+          "periode": "clôture d'octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          }
+        },
+        {
+          "id": "cl_heures",
+          "valeur": -5,
+          "unite": "jours",
+          "periode": "clôture d'octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          }
+        },
+        {
+          "id": "cl_cal",
+          "valeur": -2,
+          "unite": "jours",
+          "periode": "clôture d'octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          }
+        },
+        {
+          "id": "cl_cible",
+          "valeur": 8,
+          "unite": "jours",
+          "periode": "mars 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          },
+          "calcul": "cl_avant + cl_ocr + cl_banque + cl_heures + cl_cal",
+          "decimales": 0,
+          "dansTitre": true
+        },
+        {
+          "id": "cl_gain",
+          "valeur": 17,
+          "unite": "jours",
+          "periode": "mars 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          },
+          "calcul": "cl_avant - cl_cible",
+          "decimales": 0
+        },
+        {
+          "id": "cl_sans",
+          "valeur": 13,
+          "unite": "jours",
+          "periode": "mars 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          },
+          "calcul": "cl_cible - cl_heures",
+          "decimales": 0
+        },
+        {
+          "id": "cl_factures",
+          "valeur": 1200,
+          "unite": "factures",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          }
+        },
+        {
+          "id": "cl_ocr_mois",
+          "valeur": 60,
+          "unite": "€",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          }
+        },
+        {
+          "id": "cl_heures_mois",
+          "valeur": 140,
+          "unite": "€",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          }
+        },
+        {
+          "id": "cl_cout",
+          "valeur": 2.4,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          },
+          "calcul": "(cl_ocr_mois + cl_heures_mois) * 12 / 1000",
+          "decimales": 1,
+          "dansTitre": true
+        },
+        {
+          "id": "cl_comptable",
+          "valeur": 24,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          },
+          "hypothese": "mi-temps, salaire chargé de la région"
+        },
+        {
+          "id": "cl_revue",
+          "valeur": 45,
+          "unite": "min",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Diagnostic de la clôture mensuelle Atelier Gardelle, octobre 2026, devis des éditeurs (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-08"
+          }
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "id": "s8",
+      "type": "contenu",
+      "titre": "Reprise de Vasseur : offrir 560 k€ dont 100 k€ liés à l'EBE 2027 ; les 750 k€ demandés valent 6 fois l'EBE, hors de toutes les fourchettes",
+      "chiffres": [
+        {
+          "id": "va_ebe",
+          "valeur": 140,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_dette",
+          "valeur": 90,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_ca",
+          "valeur": 1100,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_retr",
+          "valeur": 35,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_m_lo",
+          "valeur": 4,
+          "unite": "x",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_m_hi",
+          "valeur": 5,
+          "unite": "x",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_c_lo",
+          "valeur": 0.4,
+          "unite": "x",
+          "periode": "2023 à 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "va_c_hi",
+          "valeur": 0.55,
+          "unite": "x",
+          "periode": "2023 à 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "decimales": 2
+        },
+        {
+          "id": "va_t_lo",
+          "valeur": 12,
+          "unite": "%",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_t_hi",
+          "valeur": 14,
+          "unite": "%",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_taille",
+          "valeur": 20,
+          "unite": "salariés",
+          "periode": "2023 à 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_eb_lo",
+          "valeur": 470,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "va_ebe * va_m_lo - va_dette",
+          "decimales": 0
+        },
+        {
+          "id": "va_eb_hi",
+          "valeur": 610,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "va_ebe * va_m_hi - va_dette",
+          "decimales": 0
+        },
+        {
+          "id": "va_df_lo",
+          "valeur": 520,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_df_hi",
+          "valeur": 680,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_co_lo",
+          "valeur": 350,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "va_ca * va_c_lo - va_dette",
+          "decimales": 0
+        },
+        {
+          "id": "va_co_hi",
+          "valeur": 515,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "va_ca * va_c_hi - va_dette",
+          "decimales": 0
+        },
+        {
+          "id": "va_an_lo",
+          "valeur": 380,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_an_hi",
+          "valeur": 430,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_demande",
+          "valeur": 750,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "dansTitre": true
+        },
+        {
+          "id": "va_offre",
+          "valeur": 560,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "dansTitre": true
+        },
+        {
+          "id": "va_compl",
+          "valeur": 100,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "dansTitre": true
+        },
+        {
+          "id": "va_comptant",
+          "valeur": 460,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "va_offre - va_compl",
+          "decimales": 0
+        },
+        {
+          "id": "va_x_dem",
+          "valeur": 6,
+          "unite": "x",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "(va_demande + va_dette) / va_ebe",
+          "decimales": 0,
+          "dansTitre": true
+        },
+        {
+          "id": "va_x_off",
+          "valeur": 4.6,
+          "unite": "x",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "calcul": "(va_offre + va_dette) / va_ebe",
+          "decimales": 1
+        },
+        {
+          "id": "va_clients",
+          "valeur": 38,
+          "unite": "%",
+          "periode": "2025",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        },
+        {
+          "id": "va_sans",
+          "valeur": 410,
+          "unite": "k€",
+          "periode": "2025",
+          "statut": "E",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          },
+          "hypothese": "flux futurs sans les deux clients hôteliers"
+        },
+        {
+          "id": "va_ops",
+          "valeur": 11,
+          "unite": "cessions",
+          "periode": "2023 à 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Comptes 2025 de la Menuiserie Vasseur, modèle de valorisation Ciceria du 10/11/2026, base de cessions (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-10"
+          }
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "id": "s9",
+      "type": "contenu",
+      "titre": "Proposition : deux jours par mois de janvier à juin, 13,2 k€ HT, pour le dossier bancaire, la reprise de Vasseur et la clôture à J+8",
+      "chiffres": [
+        {
+          "id": "pr_tjm",
+          "valeur": 1.1,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "pr_j1",
+          "valeur": 6,
+          "unite": "jours",
+          "periode": "janvier à juin 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          }
+        },
+        {
+          "id": "pr_j2",
+          "valeur": 12,
+          "unite": "jours",
+          "periode": "janvier à juin 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          }
+        },
+        {
+          "id": "pr_j3",
+          "valeur": 24,
+          "unite": "jours",
+          "periode": "janvier à juin 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          }
+        },
+        {
+          "id": "pr_h1",
+          "valeur": 6.6,
+          "unite": "k€",
+          "periode": "janvier à juin 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "calcul": "pr_j1 * pr_tjm",
+          "decimales": 1
+        },
+        {
+          "id": "pr_h2",
+          "valeur": 13.2,
+          "unite": "k€",
+          "periode": "janvier à juin 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "calcul": "pr_j2 * pr_tjm",
+          "decimales": 1,
+          "dansTitre": true
+        },
+        {
+          "id": "pr_h3",
+          "valeur": 26.4,
+          "unite": "k€",
+          "periode": "janvier à juin 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "calcul": "pr_j3 * pr_tjm",
+          "decimales": 1
+        },
+        {
+          "id": "pr_sup_j",
+          "valeur": 3,
+          "unite": "jours",
+          "periode": "février 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          }
+        },
+        {
+          "id": "pr_sup",
+          "valeur": 3.3,
+          "unite": "k€",
+          "periode": "février 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "calcul": "pr_sup_j * pr_tjm",
+          "decimales": 1
+        },
+        {
+          "id": "pr_total",
+          "valeur": 16.5,
+          "unite": "k€",
+          "periode": "janvier à juin 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "calcul": "pr_h2 + pr_sup",
+          "decimales": 1
+        },
+        {
+          "id": "pr_cible",
+          "valeur": 8,
+          "unite": "jours",
+          "periode": "mars 2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "calcul": "cl_cible",
+          "decimales": 0,
+          "dansTitre": true
+        },
+        {
+          "id": "pr_avant",
+          "valeur": 25,
+          "unite": "jours",
+          "periode": "octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "calcul": "cl_avant",
+          "decimales": 0
+        },
+        {
+          "id": "pr_clause",
+          "valeur": 49,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "calcul": "tb_an",
+          "decimales": 0,
+          "hypothese": "voir slide 4"
+        },
+        {
+          "id": "pr_ratio",
+          "valeur": 3.7,
+          "unite": "x",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Proposition d'intervention Ciceria Conseil du 12/11/2026, barème journalier (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-12"
+          },
+          "calcul": "pr_clause / pr_h2",
+          "decimales": 1
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "id": "s10",
+      "type": "contenu",
+      "titre": "Synthèse : cinq décisions d'ici la mi-janvier ; une seule ne peut pas attendre, tirer 80 k€ de ligne court terme avant Noël",
+      "chiffres": [
+        {
+          "id": "sy_ligne",
+          "valeur": 80,
+          "unite": "k€",
+          "periode": "18/12/2026 au 18/01/2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "dansTitre": true
+        },
+        {
+          "id": "sy_interets",
+          "valeur": 0.3,
+          "unite": "k€",
+          "periode": "18/12/2026 au 18/01/2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "calcul": "interets",
+          "decimales": 1,
+          "hypothese": "voir slide 3"
+        },
+        {
+          "id": "sy_clause",
+          "valeur": 49,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "calcul": "tb_an",
+          "decimales": 0,
+          "hypothese": "voir slide 4"
+        },
+        {
+          "id": "sy_seuil",
+          "valeur": 15,
+          "unite": "%",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "sy_gain",
+          "valeur": 23,
+          "unite": "k€",
+          "periode": "janvier à octobre 2026",
+          "statut": "E",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "calcul": "mg_gain",
+          "decimales": 0,
+          "hypothese": "voir slide 5"
+        },
+        {
+          "id": "sy_invest",
+          "valeur": 420,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "sy_cov",
+          "valeur": 1.7,
+          "unite": "x",
+          "periode": "2027",
+          "statut": "P",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "decimales": 1
+        },
+        {
+          "id": "sy_offre",
+          "valeur": 560,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "sy_compl",
+          "valeur": 100,
+          "unite": "k€",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "sy_retard",
+          "valeur": 60,
+          "unite": "jours",
+          "periode": "2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "sy_bas",
+          "valeur": 74,
+          "unite": "k€",
+          "periode": "11/01/2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "calcul": "bas_retard",
+          "decimales": 0,
+          "hypothese": "voir slide 3"
+        },
+        {
+          "id": "sy_x_dem",
+          "valeur": 6,
+          "unite": "x",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "sy_stagne",
+          "valeur": 1.3,
+          "unite": "x",
+          "periode": "2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Slides 3 à 9 de ce deck (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "decimales": 1,
+          "hypothese": "voir slide 6"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "id": "s11",
+      "type": "contenu",
+      "titre": "Trois chartes au choix : la même slide en registre éditorial (par défaut), en panneau contrasté ou en lavande",
+      "chiffres": []
     }
   ]
 }

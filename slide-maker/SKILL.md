@@ -1,6 +1,6 @@
 ---
 name: slide-maker
-description: "Construit ou relit des présentations professionnelles en PowerPoint (.pptx natif, graphiques modifiables) : deck client, point mensuel, comité de direction, budget, slide isolée. À utiliser dès qu'on demande un deck, des slides, une présentation, un exhibit ou un graphique pour une présentation, ou la relecture d'un deck existant. Méthode : cadrage, plan de titres validé avant toute mise en page, choix du graphique par la question du lecteur, sources sur chaque chiffre, relecture finale chiffrée. Thème par défaut : charte Ciceria (brun, beige, indigo)."
+description: "Construit ou relit des présentations professionnelles en PowerPoint (.pptx natif, graphiques modifiables) : deck client, point mensuel, comité de direction, budget, slide isolée. À utiliser dès qu'on demande un deck, des slides, une présentation, un exhibit ou un graphique pour une présentation, ou la relecture d'un deck existant. Méthode : cadrage, plan de titres validé avant toute mise en page, choix du graphique par la question du lecteur, sources sur chaque chiffre, relecture finale chiffrée. Thème par défaut : charte Ciceria (brun, beige, indigo), en trois variantes. Cette direction visuelle s'applique aussi à tout document Word ou PowerPoint du cabinet à produire ou à mettre en forme (lettre de mission, proposition, rapport, compte rendu)."
 ---
 
 # slide-maker : des slides de conseil, sans template
@@ -18,6 +18,16 @@ Réponds toujours en français. Pas d'emoji, pas de tiret long (utiliser « - »
 5. **Une source sur chaque slide qui porte un chiffre**, avec le périmètre, l'unité et la période en sous-titre.
 6. **Un chiffre sans source bloque la livraison** ; un chiffre estimé s'étiquette « E » ; un trou s'affiche « n.d. ».
 7. **PowerPoint natif** : graphiques éditables (jamais une image de graphique), polices et couleurs du thème.
+
+## La même direction visuelle pour tous les documents du cabinet
+
+Le deck d'exemple (`exemple/demo-ciceria.pptx`) fixe le niveau visuel attendu, et pas seulement pour les slides. **Applique systématiquement cette direction artistique à tout document Word ou PowerPoint du cabinet**, qu'on te demande de le créer ou seulement de le mettre en forme : lettre de mission, proposition d'intervention, rapport, compte rendu, note au dirigeant, modèle de document.
+
+- **Charte** : une des trois chartes Ciceria (`references/chartes/*.json`, détail dans [themes.md](references/themes.md)), l'éditoriale par défaut. Mêmes couleurs par rôle (fond, texte, filets, accent indigo unique, panneau), mêmes polices (Source Serif 4 SemiBold pour les titres, IBM Plex Sans pour le texte, repli Georgia et Arial).
+- **Mise en page** : titres qui disent la conclusion, filets fins plutôt que cadres, une seule couleur d'accent, tableaux sans quadrillage lourd, encadré « Recommandation » ou « À retenir » en aplat d'accent pâle, notes et sources en pied.
+- **Dans un Word**, les mêmes jetons deviennent les styles du document (Titre 1 et 2, Normal, Légende, tableau), pour que le texte ajouté plus tard reste dans la charte.
+- **Proposition commerciale** (slides) : un logo figure **toujours en haut à droite de chaque slide**. **Demande à chaque fois** lequel : celui de Ciceria ou celui du client à qui s'adresse la proposition (la réponse change d'une proposition à l'autre, ne la suppose jamais). Pose-le avec `L.deck({ logoClient: 'chemin/du/logo.png' })` ; sans le fichier, demande-le avant de produire.
+- **Exigence de fond** : un document de cabinet tranche aussi (objet, engagement, montant, date, qui fait quoi) ; les règles de chiffres et de sources ci-dessous valent pour lui.
 
 ## L'exigence de contenu : ce qui sépare une slide de conseil d'une slide générée
 
@@ -151,7 +161,7 @@ Règles de grille, de tailles et de couleurs : [design-system.md](references/des
 
 ### Fabriquer le fichier
 
-Le dossier `tools/` de cette skill contient tout : `lib.js` (thèmes, grille, moves), `deck-data.js` (lecture du registre), `lint-deck.mjs` (relecture), `exemple.js` (deck complet de sept slides à copier comme modèle), `demo-ciceria.js` (une analyse dense au niveau attendu, en slide 3).
+Le dossier `tools/` de cette skill contient tout : `lib.js` (thèmes, grille, moves), `deck-data.js` (lecture du registre), `lint-deck.mjs` (relecture), `exemple.js` (deck complet de sept slides à copier comme modèle), `demo-ciceria.js` (deck de démonstration de onze slides : méthode, analyses denses, proposition d'intervention, synthèse, trois chartes ; options `--theme X` et `--seule N`).
 
 1. Place-toi dans un dossier de travail et copie-y `tools/` (ou travaille dans `tools/`). Si `require('pptxgenjs')` échoue, lance `npm install pptxgenjs` ; si le réseau est coupé, dis-le et propose de passer par la compétence PowerPoint intégrée en reprenant les mêmes titres et couleurs.
 2. Si l'utilisatrice a fourni un logo, enregistre-le sous le nom `logo.png` dans ce dossier : `L.deck()` le trouve seul.
@@ -202,7 +212,8 @@ Pour un comparatif, une matrice ou un tableau de retards : titre sur deux lignes
 |---|---|
 | `references/principes.md` | Les habitudes des meilleures slides, anti-patterns, tests du titre-action |
 | `references/design-system.md` | Tailles, grille, filets, règles des graphiques et des tableaux |
-| `references/themes.md` | Thèmes `ciceria` (défaut) et `encre`, polices, repli, logo, ajouter une charte |
+| `references/themes.md` | Trois chartes Ciceria (`ciceria` par défaut, `ciceria-contraste`, `ciceria-lavande`), rôles et clés, thème `encre`, polices, repli, logo, ajouter une charte |
+| `references/chartes/*.json` | Jetons des trois chartes (rampes, rôles, palette data, contrastes), lus par `lib.js` |
 | `references/chart-picker.md` | Quelle comparaison appelle quel graphique |
 | `references/moves.md` | Les 28 gestes de mise en page et leur fonction |
 | `references/squelettes-deck.md` | Plans de deck : recommandation, trésorerie, budget, comité... |
@@ -212,3 +223,4 @@ Pour un comparatif, une matrice ou un tableau de retards : titre sur deux lignes
 | `tools/deck-data.js` | Lecture du registre pour écrire titres, chiffres, sources |
 | `tools/lint-deck.mjs` | Relecture automatique d'un PPTX contre son registre |
 | `tools/exemple.js`, `tools/exemple.data.json` | Deck d'exemple de sept slides (PME fictive, mode lecture) |
+| `tools/demo-ciceria.js`, `tools/demo-ciceria.data.json` | Deck de démonstration de onze slides (`exemple/demo-ciceria.pptx`), niveau visuel et de contenu attendu |

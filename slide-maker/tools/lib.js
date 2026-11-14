@@ -20,6 +20,28 @@ const THEMES = {
     accent: '1F5A45', accent2: '3E2519', accentLight: 'DCE9E2', panel: '3E2519', panelText: 'FFFFFF', panelAccent: 'E3C9A6',
     pos: '1F5A45', neg: 'B3362B', ref: 'D29A2E', seq: ['3E2519', '6A4430', '93684A', 'B89478'], actual: 'B89478', plan: '6A4430' },
 };
+// Chartes élargies Ciceria (references/chartes/*.json, jetons : rampes, rôles, palette data, contrastes mesurés).
+// ciceria = A, registre éditorial (défaut) ; ciceria-contraste = B, panneau brun presque noir ; ciceria-lavande = C, surfaces lavande.
+// Si un fichier de jetons manque, le thème ciceria écrit en dur ci-dessus reste utilisé.
+const lumHex = (hex) => { const n = parseInt(hex, 16); return (0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)) / 255; };
+function themeDepuisJetons(fichier) {
+  const j = JSON.parse(require('fs').readFileSync(fichier, 'utf8'));
+  const R = j.roles, D = j.data, h = (k) => R[k] && R[k].hex;
+  const seq = D.sequentielle.map((x) => x.hex);
+  const panel = h('panneau');
+  return { ink: h('texte-1'), title: h('titre') || h('texte-1'), n1: h('texte-2'), n2: h('texte-3'), n3: h('donnee-contexte'), n4: h('filet'), n5: h('donnee-fantome'),
+    n6: h('surface-2'), bg: h('fond'), surface: h('surface'), accent: h('accent'), accent2: h('accent-texte'), accentLight: h('accent-pale'), lavande: h('accent-sur-sombre'),
+    panel, panelText: h('texte-sur-panneau'), panelAccent: lumHex(panel) > 0.55 ? h('accent-texte') : h('accent-sur-sombre'),
+    pos: D.etats.positif.plein.hex, neg: D.etats.negatif.plein.hex, ref: h('reference'), seq: [seq[seq.length - 1], seq[4], seq[2], seq[0]],
+    actual: h('donnee-contexte'), plan: h('accent'), cat: D.categorielle.map((x) => x.hex), jetons: j.direction.id };
+}
+[['ciceria', 'ciceria.json'], ['ciceria-contraste', 'ciceria-contraste.json'], ['ciceria-lavande', 'ciceria-lavande.json']].forEach(([nom, f]) => {
+  const chemin = require('path').join(__dirname, '..', 'references', 'chartes', f);
+  try { THEMES[nom] = themeDepuisJetons(chemin); } catch (e) { if (nom !== 'ciceria') THEMES[nom] = THEMES.ciceria; }
+});
+// Couleur de texte lisible sur un aplat (blanc sur foncé, encre sur clair)
+const surAplat = (T, fill) => (lumHex(fill) > 0.55 ? T.ink : 'FFFFFF');
+
 // Paires foncé/clair pour les familles de pairs (move familles-fonce-clair)
 const FAMILIES = [['8A6A2E', 'EFE6D2'], ['2F5D7C', 'DCE7EF'], ['4F6B3A', 'E2EAD9'], ['7A3B55', 'EFDDE5']];
 
@@ -68,17 +90,18 @@ function trouverLogo(chemin) {
 }
 
 // theme : 'ciceria' (défaut) ou 'encre' ; fonts : 'auto' (défaut : charte si installée, sinon repli), 'ciceria', 'repli', ou une autre clé de FONTS.
-function deck({ theme, palette, fonts = process.env.SLIDE_FONTS || 'auto', format = '16x9', logo } = {}) {
+function deck({ theme, palette, fonts = process.env.SLIDE_FONTS || 'auto', format = '16x9', logo, logoClient } = {}) {
   theme = theme || palette || 'ciceria';
+  if (!THEMES[theme]) throw new Error(`thème inconnu : ${theme} (thèmes : ${Object.keys(THEMES).join(', ')})`);
   if (fonts === 'auto') {
-    fonts = theme === 'ciceria' ? (policesInstallees() ? 'ciceria' : 'repli') : 'repli';
+    fonts = theme.startsWith('ciceria') ? (policesInstallees() ? 'ciceria' : 'repli') : 'repli';
     if (fonts === 'repli') console.log('Polices de la charte non trouvées : repli sur Georgia et Arial (installer Source Serif 4 et IBM Plex Sans depuis Google Fonts pour la charte complète).');
   }
   const pres = new PptxGenJS();
   const f = FORMATS[format];
   pres.defineLayout({ name: format, width: f.W, height: f.H });
   pres.layout = format;
-  const ctx = { pres, T: THEMES[theme], Fn: FONTS[fonts], G: grid(f), S: f.size, SH: pres.ShapeType, CH: pres.ChartType, page: 0, logo: trouverLogo(logo) };
+  const ctx = { pres, T: THEMES[theme], Fn: FONTS[fonts], G: grid(f), S: f.size, SH: pres.ShapeType, CH: pres.ChartType, page: 0, logo: trouverLogo(logo), logoClient: logoClient || null };
   ctx.slide = (o) => frame(ctx, o);
   ctx.save = (p) => pres.writeFile({ fileName: p });
   return ctx;
@@ -111,9 +134,12 @@ function frame(ctx, o = {}) {
   s.background = { color: T.bg };
   ctx.page += 1;
   const tw = o.titleW || G.cwid;
-  if (o.kicker) txt(ctx, s, o.kicker, { x: G.ml, y: G.y.kicker, w: tw, h: 0.2, fontSize: S.kicker, fontFace: Fn.semi, color: T.accent, charSpacing: 0.5 });
-  if (o.title) s.addText(md(o.title, { color: T.accent }), { x: G.ml, y: G.y.title, w: tw, h: G.y.titleH, fontFace: Fn.title, bold: !!Fn.boldSemi, fontSize: S.title, color: T.ink, margin: 0, valign: 'top', lineSpacingMultiple: 0.95, isTextBox: true, fit: 'none' });
+  if (o.kicker) txt(ctx, s, o.kicker, { x: G.ml, y: G.y.kicker, w: (o.logoClient !== undefined ? o.logoClient : ctx.logoClient) ? Math.min(tw, G.cwid - 1.7) : tw, h: 0.2, fontSize: S.kicker, fontFace: Fn.semi, color: T.accent, charSpacing: 0.5 });
+  if (o.title) s.addText(md(o.title, { color: T.accent }), { x: G.ml, y: G.y.title, w: tw, h: G.y.titleH, fontFace: Fn.title, bold: !!Fn.boldSemi, fontSize: S.title, color: T.title || T.ink, margin: 0, valign: 'top', lineSpacingMultiple: 0.95, isTextBox: true, fit: 'none' });
   if (o.subtitle) txt(ctx, s, o.subtitle, { x: G.ml, y: G.y.sub, w: tw, h: 0.26, fontSize: S.body, color: T.n2 });
+  // Proposition commerciale : logo de l'entreprise destinataire en haut à droite de chaque slide (o.logoClient ou ctx.logoClient, chemin d'image)
+  const lc = o.logoClient !== undefined ? o.logoClient : ctx.logoClient;
+  if (lc) s.addImage({ path: lc, x: G.W - G.mr - 1.5, y: 0.22, w: 1.5, h: 0.36, sizing: { type: 'contain', w: 1.5, h: 0.36 }, altText: 'Logo du client' });
   if (ctx.logo && o.footer !== false && o.logo !== false) s.addImage({ path: ctx.logo, x: G.W - G.mr - 2.0, y: G.y.page - 0.12, w: 1.4, h: 0.34, sizing: { type: 'contain', w: 1.4, h: 0.34 }, altText: 'Logo' });
   if (o.footer !== false) footer(ctx, s, { ...o, footW: o.footW || Math.min(tw, ctx.logo ? G.cwid - 2.2 : tw) });
   if (o.page !== false && o.footer !== false) pageNo(ctx, s);
@@ -207,10 +233,10 @@ function encadre(ctx, s, { x, y, w, h, n, title, text, focus = false }) {
   txt(ctx, s, [{ text: title, options: { fontFace: Fn.semi, breakLine: true, color: T.ink } }, { text, options: { color: T.n1 } }], { x: tx, y: y + 0.1, w: w - (tx - x) - 0.15, h: h - 0.2, fontSize: S.body, lineSpacingMultiple: 1.05 });
 }
 // Bandeau de conclusion : une seule phrase actionnable, libellé en semi-gras.
-function bandeau(ctx, s, { y, h = 0.5, label = 'Conclusion', text }) {
-  const { T, Fn, G, S } = ctx;
-  rect(ctx, s, G.ml, y, G.cwid, h, { fill: T.accentLight });
-  txt(ctx, s, [{ text: label + ' : ', options: { fontFace: Fn.semi, color: T.accent2 } }, { text, options: { color: T.ink } }], { x: G.ml + 0.2, y, w: G.cwid - 0.4, h, fontSize: S.body + 1, valign: 'middle' });
+function bandeau(ctx, s, { y, h = 0.5, label = 'Conclusion', text, x, w }) {
+  const { T, Fn, G, S } = ctx; x = x ?? G.ml; w = w ?? G.cwid;
+  rect(ctx, s, x, y, w, h, { fill: T.accentLight });
+  txt(ctx, s, [{ text: label + ' : ', options: { fontFace: Fn.semi, color: T.accent2 } }, { text, options: { color: T.ink } }], { x: x + 0.2, y, w: w - 0.4, h, fontSize: S.body + 1, valign: 'middle' });
 }
 
 // ================================================================ MOVES
@@ -382,15 +408,15 @@ function smallMultiples(ctx, s, { years, split, rows, y0 = ctx.G.y.top, y1 = ctx
   rect(ctx, s, xC, y0, split * colW - 0.03, 0.26, { fill: T.actual });
   rect(ctx, s, xC + split * colW + 0.03, y0, (n - split) * colW - 0.03, 0.26, { fill: T.plan });
   rect(ctx, s, xR, y0, wR, 0.26, { fill: T.panel });
-  [[xC, split * colW, heads[0]], [xC + split * colW, (n - split) * colW, heads[1]], [xR, wR, heads[2]]].forEach(([x, w, t]) =>
-    txt(ctx, s, t, { x, y: y0, w, h: 0.26, fontSize: S.axis, fontFace: Fn.semi, color: 'FFFFFF', align: 'center', valign: 'middle' }));
+  [[xC, split * colW, heads[0], T.actual], [xC + split * colW, (n - split) * colW, heads[1], T.plan], [xR, wR, heads[2], T.panel]].forEach(([x, w, t, f]) =>
+    txt(ctx, s, t, { x, y: y0, w, h: 0.26, fontSize: S.axis, fontFace: Fn.semi, color: surAplat(T, f), align: 'center', valign: 'middle' }));
   years.forEach((yv, i) => txt(ctx, s, yv, { x: xs(i) - colW / 2, y: y0 + 0.32, w: colW, h: 0.2, fontSize: S.axis, fontFace: Fn.semi, color: T.n1, align: 'center' }));
   const top = y0 + 0.6; const rh = (y1 - top) / rows.length; const out = [];
   rows.forEach((r, k) => {
     const ry = top + k * rh;
     line(ctx, s, G.ml, ry, G.W - G.mr, ry, { color: T.n5, w: 0.5 });
     rect(ctx, s, xL, ry + 0.12, labelW, rh - 0.24, { fill: T.panel });
-    txt(ctx, s, r.label, { x: xL + 0.08, y: ry + 0.12, w: labelW - 0.16, h: rh - 0.24, fontSize: S.axis + 1, fontFace: Fn.semi, color: 'FFFFFF', align: 'center', valign: 'middle' });
+    txt(ctx, s, r.label, { x: xL + 0.08, y: ry + 0.12, w: labelW - 0.16, h: rh - 0.24, fontSize: S.axis + 1, fontFace: Fn.semi, color: surAplat(T, T.panel), align: 'center', valign: 'middle' });
     if (r.ratios) r.ratios.forEach((t, i) => txt(ctx, s, t, { x: xs(i) - colW / 2, y: ry + 0.08, w: colW, h: 0.18, fontSize: S.axis, italic: true, align: 'center',
       color: /^[−-]/.test(t) ? T.neg : T.n2 }));
     const box = { x: xC, y: ry + 0.26, w: chartW, h: rh - 0.32 };
@@ -466,7 +492,7 @@ function serieAnnotee(ctx, s, { box, labels, values, min, max, events, layout = 
 }
 
 // Football field natif (support du move mise-entre-parentheses + ligne-de-reference verticale)
-function footballField(ctx, s, { rows, min, max, offer, x0, y0, y1, methodW = 2.35, barW = 5.3, heads }) {
+function footballField(ctx, s, { rows, min, max, offer, x0, y0, y1, methodW = 2.35, barW = 5.3, heads, fmt }) {
   const { T, Fn, G, S } = ctx; const n = rows.length;
   const xM = x0 + 0.34, xB = xM + methodW + 0.55, xC = xB + barW + 0.55, wC = G.W - G.mr - xC;
   const hy = y0; const top = y0 + 0.42; const rh = (y1 - top) / n;
@@ -483,11 +509,11 @@ function footballField(ctx, s, { rows, min, max, offer, x0, y0, y1, methodW = 2.
     if (i) line(ctx, s, xM, y, G.W - G.mr, y, { color: T.n5, w: 0.5 });
     rect(ctx, s, xM, y + 0.07, methodW, rh - 0.14, { fill: r.ref ? T.n5 : T.panel });
     txt(ctx, s, [{ text: r.method, options: { fontFace: Fn.semi, breakLine: !!r.sub } }].concat(r.sub ? [{ text: r.sub, options: { fontSize: S.axis } }] : []),
-      { x: xM + 0.1, y: y + 0.07, w: methodW - 0.2, h: rh - 0.14, fontSize: S.axis + 1, color: r.ref ? T.n1 : 'FFFFFF', valign: 'middle' });
-    const f = (v) => v.toFixed(2).replace('.', ',') + ' €';
+      { x: xM + 0.1, y: y + 0.07, w: methodW - 0.2, h: rh - 0.14, fontSize: S.axis + 1, color: r.ref ? T.n1 : surAplat(T, T.panel), valign: 'middle' });
+    const f = fmt || ((v) => v.toFixed(2).replace('.', ',') + ' €'); // fmt : format des bornes (défaut : prix par action)
     txt(ctx, s, f(r.lo), { x: xVal(P, r.lo - min, 0, max - min) - 0.85, y: cy - 0.1, w: 0.8, h: 0.2, fontSize: S.axis, color: T.n1, align: 'right', valign: 'middle' });
     txt(ctx, s, f(r.hi), { x: xVal(P, r.hi - min, 0, max - min) + 0.05, y: cy - 0.1, w: 0.8, h: 0.2, fontSize: S.axis, color: T.n1, valign: 'middle' });
-    txt(ctx, s, md(r.comment, { fontFace: Fn.semi, color: T.ink }), { x: xC, y: y + 0.04, w: wC, h: rh - 0.08, fontSize: S.axis, color: T.n1, valign: 'middle' });
+    txt(ctx, s, md(r.comment, { fontFace: Fn.semi, color: T.ink }), { x: xC, y: y + 0.04, w: wC, h: rh - 0.08, fontSize: S.data, color: T.n1, valign: 'middle' });
   });
   const refIdx = rows.map((r, i) => (r.ref ? i : -1)).filter((i) => i >= 0);
   if (refIdx.length) bracket(ctx, s, { x: x0, y: top + refIdx[0] * rh + 0.07, h: refIdx.length * rh - 0.14, text: 'Pour référence' });
@@ -508,7 +534,7 @@ function cibleRealise(ctx, s, { rows, heads, y0 = ctx.G.y.top + 0.1, y1 = ctx.G.
     txt(ctx, s, [{ text: r.target, options: { fontFace: Fn.hero, fontSize: 34, color: T.ink } }, { text: '   ' + r.label, options: { fontSize: S.body, color: T.n1 } }],
       { x: G.ml, y: cy - 0.32, w: xm - G.ml - 0.5, h: 0.64, valign: 'middle' });
     s.addShape(ctx.SH.triangle, { x: xm - 0.2, y: cy - 0.2, w: 0.4, h: 0.4, rotate: 90, fill: { color: T.bg }, line: { type: 'none' } });
-    txt(ctx, s, [{ text: r.done, options: { fontFace: Fn.title, fontSize: 38, color: r.ok ? T.panelAccent : 'FFFFFF' } }, { text: '   ' + r.label, options: { fontSize: S.body, color: 'D9D4CC' } }],
+    txt(ctx, s, [{ text: r.done, options: { fontFace: Fn.title, fontSize: 38, color: r.ok ? T.panelAccent : T.panelText } }, { text: '   ' + r.label, options: { fontSize: S.body, color: 'D9D4CC' } }],
       { x: xm + 0.55, y: cy - 0.32, w: xm - 1.75, h: 0.64, valign: 'middle' });
     const kx = G.W - G.mr - 0.2; ellipse(ctx, s, kx, cy, 0.4, { line: r.ok ? T.panelAccent : '8A847C', lw: 1.25 });
     txt(ctx, s, r.ok ? '✓' : '✕', { x: kx - 0.2, y: cy - 0.2, w: 0.4, h: 0.4, fontSize: 14, fontFace: 'Segoe UI Symbol', color: r.ok ? T.panelAccent : 'B8B2A9', align: 'center', valign: 'middle' });
@@ -565,6 +591,6 @@ function entonnoir(ctx, s, { x0, w0, y0, y1, stages, arrowX, cardX }) {
   });
 }
 
-module.exports = { etiquetteDegagee, typo, policesInstallees, pastille, encadre, bandeau, pageNo, footer, THEMES, FAMILIES, FONTS, FORMATS, deck, md, txt, rect, line, ellipse, pill, textW, plotBox, xAt, yAt, xVal, revBar, mix, lum, bars, baseChart, fmtThousands,
+module.exports = { themeDepuisJetons, surAplat, etiquetteDegagee, typo, policesInstallees, pastille, encadre, bandeau, pageNo, footer, THEMES, FAMILIES, FONTS, FORMATS, deck, md, txt, rect, line, ellipse, pill, textW, plotBox, xAt, yAt, xVal, revBar, mix, lum, bars, baseChart, fmtThousands,
   grisUnAccent, fondFantome, leadRuns, medaillon, panneauConclusion, verdict, ligneReference, zoneFocus, tableAuPas, pastillesAuPas, accolade, cote,
   rangeeUnite, bracket, smallMultiples, bridgeGroupes, serieAnnotee, footballField, cibleRealise, chiffresHeros, donutSobre, entonnoir };
