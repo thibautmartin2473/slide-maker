@@ -1,0 +1,481 @@
+{
+  "deck": "Veyrac Matériaux, point de trésorerie d'octobre 2026",
+  "version": 1,
+  "parametres": {
+    "mode": "lecture",
+    "policeMinPt": 10,
+    "policeMinNotePt": 10,
+    "niveauxTexteMax": null,
+    "verifierFichiers": false
+  },
+  "slides": [
+    {
+      "n": 1,
+      "id": "s1",
+      "type": "couverture",
+      "chiffres": []
+    },
+    {
+      "n": 2,
+      "id": "s2",
+      "titre": "La trésorerie atteint 1 420 k€ fin octobre, soit 11 semaines de charges, au-dessus du seuil de 8 semaines",
+      "titreModele": "La trésorerie atteint {treso_oct} fin octobre, soit {semaines} de charges, au-dessus du seuil de {seuil_sem}",
+      "chiffres": [
+        {
+          "id": "treso_oct",
+          "valeur": 1420,
+          "unite": "k€",
+          "periode": "octobre 2026",
+          "statut": "sourced",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Relevés bancaires au 31 octobre 2026",
+            "fichier": "releves-bancaires-2026-10.pdf",
+            "date": "2026-10-31"
+          },
+          "verifie": {
+            "par": "DAF",
+            "le": "2026-11-03"
+          }
+        },
+        {
+          "id": "charges_hebdo",
+          "valeur": 129,
+          "unite": "k€",
+          "periode": "octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Balance des charges, moyenne des 13 dernières semaines",
+            "fichier": "balance-charges-2026-10.xlsx",
+            "date": "2026-10-31"
+          },
+          "verifie": {
+            "par": "DAF",
+            "le": "2026-11-03"
+          }
+        },
+        {
+          "id": "semaines",
+          "valeur": 11,
+          "unite": "semaines",
+          "periode": "octobre 2026",
+          "statut": "sourced",
+          "calcul": "treso_oct/charges_hebdo",
+          "decimales": 0,
+          "dansTitre": true
+        },
+        {
+          "id": "seuil_sem",
+          "valeur": 8,
+          "unite": "semaines",
+          "periode": "2026",
+          "statut": "sourced",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Politique de trésorerie 2026",
+            "fichier": "politique-tresorerie-2026.pdf",
+            "date": "2026-01-15"
+          },
+          "verifie": {
+            "par": "DAF",
+            "le": "2026-11-03"
+          }
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "id": "s3",
+      "titre": "La trésorerie a baissé de 380 k€ en six mois, de 1 800 k€ en mai à 1 420 k€ fin octobre",
+      "titreModele": "La trésorerie a baissé de {baisse} en six mois, de {tre_mai} en mai à {treso_oct} fin octobre",
+      "chiffres": [
+        {
+          "id": "tre_mai",
+          "valeur": 1800,
+          "unite": "k€",
+          "periode": "mai 2026",
+          "statut": "sourced",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Relevés bancaires, fins de mois de mai à octobre 2026",
+            "fichier": "releves-bancaires-2026-05-a-10.pdf",
+            "date": "2026-10-31"
+          },
+          "verifie": {
+            "par": "DAF",
+            "le": "2026-11-03"
+          }
+        },
+        {
+          "id": "tre_juin",
+          "valeur": 1710,
+          "unite": "k€",
+          "periode": "juin 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Relevés bancaires, fins de mois de mai à octobre 2026",
+            "fichier": "releves-bancaires-2026-05-a-10.pdf",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "tre_juil",
+          "valeur": 1650,
+          "unite": "k€",
+          "periode": "juillet 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Relevés bancaires, fins de mois de mai à octobre 2026",
+            "fichier": "releves-bancaires-2026-05-a-10.pdf",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "tre_aout",
+          "valeur": 1590,
+          "unite": "k€",
+          "periode": "août 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Relevés bancaires, fins de mois de mai à octobre 2026",
+            "fichier": "releves-bancaires-2026-05-a-10.pdf",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "tre_sept",
+          "valeur": 1500,
+          "unite": "k€",
+          "periode": "septembre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Relevés bancaires, fins de mois de mai à octobre 2026",
+            "fichier": "releves-bancaires-2026-05-a-10.pdf",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "treso_oct",
+          "valeur": 1420,
+          "unite": "k€",
+          "periode": "octobre 2026",
+          "statut": "sourced",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Relevés bancaires, fins de mois de mai à octobre 2026",
+            "fichier": "releves-bancaires-2026-10.pdf",
+            "date": "2026-10-31"
+          },
+          "verifie": {
+            "par": "DAF",
+            "le": "2026-11-03"
+          }
+        },
+        {
+          "id": "baisse",
+          "valeur": 380,
+          "unite": "k€",
+          "periode": "mai à octobre 2026",
+          "statut": "sourced",
+          "calcul": "tre_mai-treso_oct",
+          "dansTitre": true
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "id": "s4",
+      "titre": "Le besoin en fonds de roulement absorbe 310 k€, plus que les investissements (240 k€)",
+      "titreModele": "Le besoin en fonds de roulement absorbe {bfr}, plus que les investissements ({invest})",
+      "chiffres": [
+        {
+          "id": "tre_mai",
+          "valeur": 1800,
+          "unite": "k€",
+          "periode": "mai 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Relevés bancaires, fins de mois de mai à octobre 2026",
+            "fichier": "releves-bancaires-2026-05-a-10.pdf",
+            "date": "2026-10-31"
+          },
+          "verifie": {
+            "par": "DAF",
+            "le": "2026-11-03"
+          }
+        },
+        {
+          "id": "cf_expl",
+          "valeur": 260,
+          "unite": "k€",
+          "periode": "mai à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Tableau de flux de trésorerie, mai à octobre 2026",
+            "fichier": "flux-tresorerie-2026-05-a-10.xlsx",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "bfr",
+          "valeur": 310,
+          "unite": "k€",
+          "periode": "mai à octobre 2026",
+          "statut": "sourced",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Tableau de flux de trésorerie, mai à octobre 2026",
+            "fichier": "flux-tresorerie-2026-05-a-10.xlsx",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "invest",
+          "valeur": 240,
+          "unite": "k€",
+          "periode": "mai à octobre 2026",
+          "statut": "sourced",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Tableau de flux de trésorerie, mai à octobre 2026",
+            "fichier": "flux-tresorerie-2026-05-a-10.xlsx",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "emprunts",
+          "valeur": 90,
+          "unite": "k€",
+          "periode": "mai à octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Tableau de flux de trésorerie, mai à octobre 2026",
+            "fichier": "flux-tresorerie-2026-05-a-10.xlsx",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "treso_oct",
+          "valeur": 1420,
+          "unite": "k€",
+          "periode": "octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Relevés bancaires au 31 octobre 2026",
+            "fichier": "releves-bancaires-2026-10.pdf",
+            "date": "2026-10-31"
+          },
+          "verifie": {
+            "par": "DAF",
+            "le": "2026-11-03"
+          }
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "id": "s5",
+      "titre": "Trois clients concentrent 46 % des retards de paiement, soit 410 k€",
+      "titreModele": "Trois clients concentrent {part3} des retards de paiement, soit {retard3}",
+      "chiffres": [
+        {
+          "id": "retard_total",
+          "valeur": 890,
+          "unite": "k€",
+          "periode": "31 octobre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Balance âgée clients au 31 octobre 2026",
+            "fichier": "balance-agee-clients-2026-10.xlsx",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "retard3",
+          "valeur": 410,
+          "unite": "k€",
+          "periode": "31 octobre 2026",
+          "statut": "sourced",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Balance âgée clients au 31 octobre 2026",
+            "fichier": "balance-agee-clients-2026-10.xlsx",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "retard_autres",
+          "valeur": 480,
+          "unite": "k€",
+          "periode": "31 octobre 2026",
+          "statut": "sourced",
+          "calcul": "retard_total-retard3",
+          "source": {
+            "libelle": "Balance âgée clients au 31 octobre 2026",
+            "fichier": "balance-agee-clients-2026-10.xlsx",
+            "date": "2026-10-31"
+          }
+        },
+        {
+          "id": "part3",
+          "valeur": 46.07,
+          "unite": "%",
+          "periode": "31 octobre 2026",
+          "statut": "sourced",
+          "calcul": "retard3/retard_total*100",
+          "decimales": 0,
+          "dansTitre": true
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "id": "s6",
+      "titre": "Sans action, la trésorerie passerait sous le seuil de 1 030 k€ en février, à 980 k€ (E)",
+      "titreModele": "Sans action, la trésorerie passerait sous le seuil de {seuil} en février, à {fev}",
+      "chiffres": [
+        {
+          "id": "seuil",
+          "valeur": 1030,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "sourced",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Politique de trésorerie 2026 (8 semaines de charges)",
+            "fichier": "politique-tresorerie-2026.pdf",
+            "date": "2026-01-15"
+          }
+        },
+        {
+          "id": "nov",
+          "valeur": 1310,
+          "unite": "k€",
+          "periode": "novembre 2026",
+          "statut": "E",
+          "hypothese": "Encaissements et décaissements au rythme moyen des six derniers mois, achat de camions inclus en décembre",
+          "source": {
+            "libelle": "Prévision de trésorerie du DAF, hypothèses au rythme actuel",
+            "fichier": "prevision-tresorerie-2026-11.xlsx",
+            "date": "2026-11-03"
+          }
+        },
+        {
+          "id": "dec",
+          "valeur": 1190,
+          "unite": "k€",
+          "periode": "décembre 2026",
+          "statut": "E",
+          "hypothese": "Idem, avec l'achat de camions de 240 k€ en décembre",
+          "source": {
+            "libelle": "Prévision de trésorerie du DAF, hypothèses au rythme actuel",
+            "fichier": "prevision-tresorerie-2026-11.xlsx",
+            "date": "2026-11-03"
+          }
+        },
+        {
+          "id": "jan",
+          "valeur": 1090,
+          "unite": "k€",
+          "periode": "janvier 2027",
+          "statut": "E",
+          "hypothese": "Idem",
+          "source": {
+            "libelle": "Prévision de trésorerie du DAF, hypothèses au rythme actuel",
+            "fichier": "prevision-tresorerie-2026-11.xlsx",
+            "date": "2026-11-03"
+          }
+        },
+        {
+          "id": "fev",
+          "valeur": 980,
+          "unite": "k€",
+          "periode": "février 2027",
+          "statut": "E",
+          "hypothese": "Idem",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Prévision de trésorerie du DAF, hypothèses au rythme actuel",
+            "fichier": "prevision-tresorerie-2026-11.xlsx",
+            "date": "2026-11-03"
+          }
+        },
+        {
+          "id": "mar",
+          "valeur": 860,
+          "unite": "k€",
+          "periode": "mars 2027",
+          "statut": "E",
+          "hypothese": "Idem",
+          "source": {
+            "libelle": "Prévision de trésorerie du DAF, hypothèses au rythme actuel",
+            "fichier": "prevision-tresorerie-2026-11.xlsx",
+            "date": "2026-11-03"
+          }
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "id": "s7",
+      "titre": "Trois décisions, d'un effet cumulé de 800 k€ (E), maintiennent la trésorerie au-dessus du seuil",
+      "titreModele": "Trois décisions, d'un effet cumulé de {effet_tot}, maintiennent la trésorerie au-dessus du seuil",
+      "chiffres": [
+        {
+          "id": "eff1",
+          "valeur": 410,
+          "unite": "k€",
+          "periode": "novembre 2026 à février 2027",
+          "statut": "E",
+          "hypothese": "Les trois clients paient leur retard d'ici fin janvier",
+          "source": {
+            "libelle": "Prévision de trésorerie du DAF, scénario avec décisions",
+            "fichier": "prevision-tresorerie-2026-11.xlsx",
+            "date": "2026-11-03"
+          }
+        },
+        {
+          "id": "eff2",
+          "valeur": 240,
+          "unite": "k€",
+          "periode": "novembre 2026 à février 2027",
+          "statut": "E",
+          "hypothese": "Achat de camions reporté de deux mois",
+          "source": {
+            "libelle": "Prévision de trésorerie du DAF, scénario avec décisions",
+            "fichier": "prevision-tresorerie-2026-11.xlsx",
+            "date": "2026-11-03"
+          }
+        },
+        {
+          "id": "eff3",
+          "valeur": 150,
+          "unite": "k€",
+          "periode": "novembre 2026 à février 2027",
+          "statut": "E",
+          "hypothese": "Délai fournisseurs porté de 30 à 45 jours sur trois fournisseurs",
+          "source": {
+            "libelle": "Prévision de trésorerie du DAF, scénario avec décisions",
+            "fichier": "prevision-tresorerie-2026-11.xlsx",
+            "date": "2026-11-03"
+          }
+        },
+        {
+          "id": "effet_tot",
+          "valeur": 800,
+          "unite": "k€",
+          "periode": "novembre 2026 à février 2027",
+          "statut": "E",
+          "calcul": "eff1+eff2+eff3",
+          "hypothese": "Somme des trois effets",
+          "dansTitre": true,
+          "source": {
+            "libelle": "Prévision de trésorerie du DAF, scénario avec décisions",
+            "fichier": "prevision-tresorerie-2026-11.xlsx",
+            "date": "2026-11-03"
+          }
+        }
+      ]
+    }
+  ]
+}
