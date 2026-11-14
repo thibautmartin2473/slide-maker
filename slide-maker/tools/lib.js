@@ -79,7 +79,8 @@ function policesInstallees() {
     '/Library/Fonts', path.join(h, 'Library', 'Fonts'), '/System/Library/Fonts', path.join(h, '.fonts'), path.join(h, '.local', 'share', 'fonts'), '/usr/share/fonts', '/usr/local/share/fonts'];
   const trouve = (re, d, prof = 0) => { try { for (const e of fs.readdirSync(d, { withFileTypes: true })) { if (e.isDirectory()) { if (prof < 3 && trouve(re, path.join(d, e.name), prof + 1)) return true; } else if (re.test(e.name)) return true; } } catch (e) { /* dossier absent */ } return false; };
   const a = (re) => dirs.filter(Boolean).some((d) => trouve(re, d));
-  return a(/sourceserif4|source.?serif.?4/i) && a(/ibmplexsans|ibm.?plex.?sans/i);
+  // Titre : le fichier sans taille optique (SourceSerif4-SemiBold, famille Windows « Source Serif 4 SemiBold ») ; les _18pt, _36pt, _48pt sont d'autres familles.
+  return a(/sourceserif4-semibold\./i) && a(/ibmplexsans-(regular|semibold)\./i);
 }
 
 // Logo de l'utilisatrice : fichier logo.png (ou chemin donné). Cherché dans le dossier courant, puis dans le dossier de la skill. Aucun logo n'est fourni.
@@ -339,7 +340,7 @@ function zoneFocus(ctx, s, { x, y, w, h, label, mode = 'band', color }) {
 function tableAuPas(ctx, s, { P, n, y, rows, rowH = 0.2, labelW = 1.0, size }) {
   const { T, Fn, S } = ctx; size = size || S.axis;
   const body = rows.map((r) => r.cells.map((c) => ({ text: String(c), options: { bold: !!r.bold, color: r.color || T.n1 } })));
-  s.addTable(body, { x: P.x, y, w: P.w, colW: Array(n).fill(P.w / n), rowH, fontFace: Fn.body, fontSize: size, align: 'center', valign: 'middle', margin: 1,
+  s.addTable(body, { x: P.x, y, w: P.w, colW: Array(n).fill(P.w / n), rowH, fontFace: Fn.body, fontSize: size, align: 'center', valign: 'middle', margin: 1, // tableau : 1 = 1 pt (première valeur >= 1, donc points)
     border: { type: 'solid', pt: 0.5, color: T.n5 } });
   rows.forEach((r, i) => txt(ctx, s, r.label, { x: P.x - labelW - 0.1, y: y + i * rowH, w: labelW, h: rowH, fontSize: size, fontFace: Fn.semi, color: T.n2, align: 'right', valign: 'middle' }));
 }

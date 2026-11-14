@@ -190,7 +190,7 @@ Puis **regarde chaque image** : débordement de texte (le défaut n° 1), chevau
 
 ### Pièges pptxgenjs
 
-- **Marge de cellule de tableau** : une valeur `< 1` est lue en **pouces**, pas en points (`margin: 0.5` = 36 pt, le tableau explose). Passer des points >= 1 ou des pouces explicites, et vérifier au rendu.
+- **Marge de cellule de tableau** (pptxgenjs 3.12) : si la **première** valeur du tableau `margin` est supérieure ou égale à 1, les quatre valeurs sont lues en points ; sinon, les **quatre** sont lues en pouces (`margin: [0, 6, 0, 6]` = 6 pouces à gauche et à droite, `margin: 0.5` = 36 pt : le tableau explose). Toujours des points entiers >= 1 (`[1, 6, 1, 6]`, `[2, 5, 2, 5]`) ; une valeur seule `margin: 1` vaut 1 pt. Les marges d'une zone de texte (`addText`), elles, sont toujours en points. Vérifier au rendu.
 - **Couleur de puce** : la puce prend toujours la couleur du texte. Pour une puce d'accent sur un texte noir : poser la puce comme forme ou caractère à part.
 - **Étiquette d'une seule barre** : un graphique natif ne sait pas colorer l'étiquette de la seule barre clé ; soit deux séries empilées (clé et autres), soit une zone de texte posée à la main (et alors la recalculer si les données changent).
 - **Lancer un script** : `node mon-deck.js` depuis le dossier `tools/` (pptxgenjs installé) ; si le module est ailleurs, `NODE_PATH=<dossier>/node_modules node mon-deck.js`.

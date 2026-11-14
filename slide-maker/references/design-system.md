@@ -150,7 +150,7 @@ Rapports-clés : titre sur corps environ 2,2 ; héros sur libellé environ 3 à 
 - Bordures **horizontales seules** 0,5 pt `n5` ; aucune bordure verticale.
 - En-tête : 9 à 10 pt semi-gras `n2`, filet plus marqué dessous (1 pt `n3`), ou bandeau plein `panel` ou `ink` à texte blanc.
 - Chiffres alignés à droite, en police de corps ; une colonne = une unité.
-- Marge de cellule en **points entiers, 1 ou plus** : pptxgenjs 3.12 lit le tableau `margin` en points si sa première valeur est supérieure ou égale à 1, sinon **toutes** les valeurs en pouces (une marge de 0,5 devient un demi-pouce et fait exploser le tableau). Toujours `margin: [2, 4, 2, 4]`, jamais `[0.5, 4, 0.5, 4]`.
+- Marge de cellule en **points entiers, 1 ou plus** : pptxgenjs 3.12 lit le tableau `margin` en points si sa première valeur est supérieure ou égale à 1, sinon **toutes** les valeurs en pouces (une marge de 0,5 devient un demi-pouce et fait exploser le tableau). Toujours `margin: [2, 4, 2, 4]`, jamais `[0, 4, 0, 4]` (4 pouces) ni `[0.5, 4, 0.5, 4]`. Une valeur seule `margin: 1` vaut 1 pt.
 - Mise en évidence : **une** ligne ou **une** cellule (fond `accentLight` ou cadre pointillé accent posé par-dessus en `addShape`).
 - Tableau sous un graphique : `colW` = largeur de la zone de tracé divisée par le nombre de barres, x = x de la zone de tracé (move [table-au-pas](moves/table-au-pas.md)).
 

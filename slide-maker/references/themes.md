@@ -44,7 +44,7 @@ Choix en une ligne : `L.deck({ theme: 'ciceria-contraste' })`. La slide 11 de `e
 
 La maquette d'origine de B prévoit une mise en page « titre dans un panneau » (bloc brun à gauche, titre en clair). Elle n'est **pas** dans `lib.js` : en B, le titre reste en haut comme dans A et C, donc jamais de titre de quatre lignes. Si on l'ajoute : panneau d'au moins 4,4 in de large et titre de 90 caractères au plus.
 
-Polices de la charte : titres **Source Serif 4** (graisse 600, nom `Source Serif 4 SemiBold`), texte **IBM Plex Sans** (400, 500, 600 : noms `IBM Plex Sans`, `IBM Plex Sans Medium`, `IBM Plex Sans SemiBold`). Le serif ne sert jamais dans un graphique.
+Polices de la charte : titres **Source Serif 4** (graisse 600, nom `Source Serif 4 SemiBold`, donné par le fichier `SourceSerif4-SemiBold.ttf` (nom Windows et PowerPoint : `Source Serif 4 SemiBold`). Les fichiers `SourceSerif4_18pt-...`, `_36pt-...`, `_48pt-...` du même dossier sont d'autres familles (« Source Serif 4 18pt SemiBold »...) : les installer ne gêne pas, mais seul le fichier sans taille optique dans le nom donne la police attendue), texte **IBM Plex Sans** (400, 500, 600 : noms `IBM Plex Sans`, `IBM Plex Sans Medium`, `IBM Plex Sans SemiBold`). Le serif ne sert jamais dans un graphique.
 
 ### Si les polices ne sont pas sur l'ordinateur
 
@@ -59,7 +59,7 @@ Les polices ne sont pas embarquées dans le PPTX. Pour un envoi à un client san
 
 ### Logo
 
-Aucun logo n'est fourni. Poser un fichier **`logo.png`** (fond transparent de préférence) dans le dossier de travail ou à côté de `SKILL.md` : `L.deck()` le trouve seul. Il apparaît en bas à droite de chaque slide de contenu (1,4 pouce de large au plus) et en haut à droite de la couverture dans l'exemple. Autre chemin : `L.deck({ logo: 'chemin/vers/logo.png' })` ou variable `SLIDE_LOGO`. Sans fichier, aucune zone de logo n'est réservée.
+Aucun logo n'est fourni. **Logo du haut à droite** (proposition commerciale) : option `logoClient` de `L.deck({ logoClient: 'chemin.png' })` ou `L.slide(..., { logoClient })`. C'est le logo de Ciceria ou celui du client selon la proposition : Claude le demande à chaque fois et ne le suppose jamais. Le logo du bas à droite (ci-dessous) reste celui du cabinet. Poser un fichier **`logo.png`** (fond transparent de préférence) dans le dossier de travail ou à côté de `SKILL.md` : `L.deck()` le trouve seul. Il apparaît en bas à droite de chaque slide de contenu (1,4 pouce de large au plus) et en haut à droite de la couverture dans l'exemple. Autre chemin : `L.deck({ logo: 'chemin/vers/logo.png' })` ou variable `SLIDE_LOGO`. Sans fichier, aucune zone de logo n'est réservée.
 
 ## Thème neutre : `encre`
 

@@ -58,7 +58,7 @@ Quand un deck arrive dans une police payante, chercher d'abord ici avant de déc
 
 ### Les trois à taille optique
 
-Inter, Source Serif 4 et Merriweather ne s'installent pas comme une famille unique : chaque taille optique est **une famille séparée**, et le nom du dossier (`Inter`) n'existe pas côté Windows. Prends celle qui encadre le corps visé, pas la plus petite disponible. (Source Serif 4 en fichiers statiques : `Source Serif 4 SemiBold` du thème par défaut est une des familles du dossier `static`.)
+Inter, Source Serif 4 et Merriweather ne s'installent pas comme une famille unique : chaque taille optique est **une famille séparée**, et le nom du dossier (`Inter`) n'existe pas côté Windows. Prends celle qui encadre le corps visé, pas la plus petite disponible. (Source Serif 4 en fichiers statiques : `Source Serif 4 SemiBold` du thème par défaut vient du seul fichier `SourceSerif4-SemiBold.ttf`, sans taille optique dans le nom ; vérifié sur la table `name` des fichiers Google Fonts : nom de famille Windows « Source Serif 4 SemiBold », famille typographique « Source Serif 4 ». Les fichiers `SourceSerif4_18pt-SemiBold.ttf` et suivants s'annoncent « Source Serif 4 18pt SemiBold ».)
 
 | Nom à écrire | Remplace | Quand |
 |---|---|---|

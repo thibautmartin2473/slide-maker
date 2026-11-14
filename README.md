@@ -24,7 +24,7 @@ Copiez le dossier `slide-maker` dans `~/.claude/skills/` (Windows : `%USERPROFIL
 
 ### Les polices de la charte (recommandé)
 
-Pour que le deck s'affiche dans la charte, installez deux familles gratuites depuis Google Fonts (fonts.google.com) : **Source Serif 4** et **IBM Plex Sans** (bouton « Get font », puis « Download », ouvrez dans le zip le sous-dossier `static`, puis chaque fichier `.ttf`, et cliquez « Installer »). Sous Windows, choisissez « Installer pour tous les utilisateurs ». Redémarrez PowerPoint.
+Pour que le deck s'affiche dans la charte, installez deux familles gratuites depuis Google Fonts (fonts.google.com) : **Source Serif 4** et **IBM Plex Sans** (bouton « Get font », puis « Download », ouvrez dans le zip le sous-dossier `static`, puis chaque fichier `.ttf`, et cliquez « Installer » ; pour Source Serif 4, le fichier indispensable est `SourceSerif4-SemiBold.ttf`, sans « 18pt », « 36pt » ni « 48pt » dans le nom). Sous Windows, choisissez « Installer pour tous les utilisateurs ». Redémarrez PowerPoint.
 Claude vous demandera si elles sont installées. Sans elles, la skill passe sur Georgia et Arial et le dit : le deck reste propre, mais la charte n'est pas respectée à l'identique. Détail : `slide-maker/references/themes.md`.
 
 ## Comment demander un deck
@@ -57,7 +57,7 @@ Au premier usage, Claude demande votre lettre de mission type, pour connaître l
 
 - **Charte :** `ciceria` par défaut ; `ciceria-contraste` (deck projeté, comité) et `ciceria-lavande` (note au dirigeant, suivi récurrent) au choix, en le demandant à Claude. Les couleurs, les polices et quand choisir laquelle : `slide-maker/references/themes.md`.
 - **Logo :** aucun logo n'est fourni dans ce dépôt. Joignez votre fichier `logo.png` (fond transparent de préférence) dans la conversation et demandez à Claude de l'enregistrer sous le nom `logo.png` dans le dossier de travail : il apparaît en bas à droite de chaque slide et sur la couverture.
-- **Proposition commerciale :** un logo figure en haut à droite de chaque slide. Claude vous demande chaque fois lequel (le vôtre ou celui du client à qui s'adresse la proposition) et vous demande le fichier.
+- **Proposition commerciale :** un logo figure en haut à droite de chaque slide (option `logoClient`) : celui de Ciceria ou celui du client à qui s'adresse la proposition. Claude vous demande chaque fois lequel, et le fichier.
 - **Autre charte :** demandez à Claude d'ajouter un thème en donnant vos couleurs (un brun ou gris foncé pour le texte, un fond clair, un seul accent) et vos polices.
 
 ## Limites à connaître
