@@ -19,6 +19,72 @@ Réponds toujours en français. Pas d'emoji, pas de tiret long (utiliser « - »
 6. **Un chiffre sans source bloque la livraison** ; un chiffre estimé s'étiquette « E » ; un trou s'affiche « n.d. ».
 7. **PowerPoint natif** : graphiques éditables (jamais une image de graphique), polices et couleurs du thème.
 
+## L'exigence de contenu : ce qui sépare une slide de conseil d'une slide générée
+
+Une slide « générée » se reconnaît vite :
+- un graphique propre ;
+- deux encarts qui le paraphrasent (« Point bas : 118 k€ ») ;
+- un titre qui constate sans trancher.
+Le dirigeant n'y apprend rien qu'il ne voyait pas déjà sur son relevé. Avant de mettre en page, chaque slide d'analyse doit passer ces six tests.
+
+1. **Rien de ce que l'exhibit montre déjà ne s'écrit.** Chaque commentaire apporte l'un de ces éléments :
+   - une **cause** (« trois sorties datées : TVA 58 k€ le 19/12, 13e mois 46 k€, échéance 31 k€ ») ;
+   - un **mécanisme** ;
+   - une **conséquence chiffrée** ;
+   - une **option**.
+   Jamais une relecture du graphique.
+2. **Le titre tranche la décision du lecteur** (étape 1, question 1). Il donne la recommandation ou l'arbitrage, avec son chiffre (« Tirer 80 k€ de ligne court terme couvre les sorties de fin d'année, même si le premier client paie en retard »), pas le constat (« La trésorerie passe sous le seuil »).
+3. **La sensibilité est dite** : ce qui ferait changer la conclusion, chiffré (« à 60 jours au lieu de 45, le point bas tombe à 74 k€ »).
+4. **L'arbitrage est montré** : au moins une option écartée, avec sa raison (délai, coût, accord requis). Une recommandation sans alternative ressemble à une opinion.
+5. **La recommandation est actionnable** : montant, date, coût, et qui fait quoi.
+6. **Test final** : qu'apprend ici le dirigeant qu'il ne savait pas ? Si la réponse est « rien », la slide est à refaire, pas à embellir.
+
+Pour une slide d'analyse lue seule, la forme par défaut est **la forme dense** ([forme-dense.md](references/forme-dense.md)) :
+- l'exhibit à gauche (environ 7 colonnes sur 12) ;
+- à droite, une « Lecture » de 3 ou 4 encadrés numérotés ;
+- chaque numéro posé sur l'exhibit, à l'endroit qu'il explique ;
+- l'encadré qui porte la décision en mise en avant ;
+- en bas, un bandeau « Recommandation » d'une phrase.
+Modèle construit pas à pas : la slide 3 de [tools/demo-ciceria.js](tools/demo-ciceria.js), avec son registre `tools/demo-ciceria.data.json`.
+
+Ces tests exigent de la matière. Une série à tracer ne suffit pas : à l'étape 1, demande ce qui **explique** les chiffres (question 4). Sans cette matière, dis-le, et propose une slide plus modeste plutôt que d'inventer des causes.
+
+## Étape 0 : première utilisation, connaître le cabinet
+
+Avant le premier deck, il faut savoir ce que fait le cabinet. Les slides doivent parler de ses vraies missions, avec son vocabulaire, et ne jamais promettre une capacité qu'il n'a pas.
+
+1. **Cherche un fichier `profil-cabinet.md`** dans le dossier de travail, dans les fichiers du projet Claude ou dans la conversation. S'il existe, lis-le et passe à l'étape 1.
+2. **S'il n'existe pas, demande d'abord, dans un seul message et avant toute autre question :**
+   - la **lettre de mission type** (ou une lettre de mission réelle anonymisée) : elle dit l'étendue des missions, les livrables, le rythme d'intervention et ce qui est exclu ;
+   - si elle existe, une **plaquette**, une **proposition d'intervention** ou une **ancienne présentation client**, qui montrent la façon de présenter ;
+   - le **logo** (`logo.png`, fond transparent de préférence).
+   Explique en une phrase pourquoi : c'est ce qui permet d'écrire des titres qui parlent comme elle et de ne rien inventer.
+3. **Lis ces documents et rédige `profil-cabinet.md`**, une page au plus :
+   - les missions, avec leurs intitulés exacts ;
+   - pour chaque mission, les livrables habituels et le rythme d'intervention ;
+   - les clients types (taille, secteur, région) ;
+   - les interlocuteurs (dirigeant, banquier, expert-comptable, comité) ;
+   - le vocabulaire maison et le ton (vouvoiement, mots qu'elle emploie, mots qu'elle évite) ;
+   - les mentions obligatoires (pied de page, confidentialité) ;
+   - ce qui est hors périmètre.
+   Montre-le-lui et fais-le valider (« 1 oui, 2 à corriger »).
+4. **Garde ce profil pour les fois suivantes :**
+   - sur claude.ai ou dans l'application Claude, conseille-lui de l'ajouter aux fichiers d'un Projet Claude « Présentations », pour qu'il soit relu à chaque conversation ;
+   - dans Claude Code, range-le dans le dossier de travail.
+5. **Confidentialité.** Une lettre de mission réelle peut citer un client, des honoraires ou des chiffres. Rien de cela ne va dans une slide sans son accord explicite, et le profil n'en garde que l'étendue des missions.
+6. **Sans document,** pars des cinq services publics de Ciceria :
+   - Pilotage et tableaux de bord ;
+   - Trésorerie et prévisionnel ;
+   - Financement et relation bancaire ;
+   - Structuration et organisation ;
+   - Opérations exceptionnelles.
+   Écris quand même `profil-cabinet.md` avec ces cinq services, marqué « provisoire » en première ligne. Dis-lui que le profil est provisoire et redemande la lettre de mission au deck suivant.
+
+Le profil sert ensuite à chaque étape :
+- en étape 1, il pré-remplit l'audience et le vocabulaire ;
+- en étape 2, il oriente le choix du squelette, selon la mission concernée ;
+- en étape 5, il sert à vérifier qu'aucune slide ne promet une prestation hors périmètre.
+
 ## Étape 1 : cadrer (un seul message, jamais en rafale)
 
 Pose toutes les questions ensemble. Chaque question donne sa proposition par défaut pour que la réponse puisse tenir en « ok » ou en une correction. Ne commence pas sans les réponses 1, 2 et 4 (bloquantes).
@@ -26,7 +92,12 @@ Pose toutes les questions ensemble. Chaque question donne sa proposition par dé
 1. **Qui lit, et quelle décision doit-il prendre ensuite ?** (dirigeant, comité, banquier, équipe.) [bloquant]
 2. **Quelle est LA réponse, en une phrase ?** C'est elle qui ouvre le deck. Sans elle on fait un rapport, pas un argument. [bloquant]
 3. **Que croit le lecteur aujourd'hui, et quelle est son objection principale ?** (sert à ordonner les preuves.)
-4. **D'où viennent les chiffres, et lesquels sont citables ?** Fichiers fournis (nom, page, date), date d'arrêté, devise, unité (k€ ou M€), exercice ou année civile, périmètre. Ce qui est estimé. [bloquant]
+4. **D'où viennent les chiffres, et lesquels sont citables ?** Fichiers fournis (nom, page, date), date d'arrêté, devise, unité (k€ ou M€), exercice ou année civile, périmètre. Ce qui est estimé. Et surtout **la matière qui explique** les chiffres, pas seulement la série à tracer. Pour une trésorerie, par exemple :
+   - le détail des flux par nature ;
+   - l'échéancier fiscal, social et d'emprunt ;
+   - la balance âgée clients ;
+   - les lignes bancaires autorisées et leur coût.
+   Pour un budget : les écarts par poste et leur cause. [bloquant]
 5. **Lu seul ou projeté ?** Lu seul (envoyé, imprimé) : texte courant 11 pt, plus dense. Projeté en réunion : 14 pt, moins de contenu. Défaut : lu seul.
 6. **Combien de slides, et y a-t-il une trame ou une version précédente à respecter ?** Défaut : 6 à 10 pour le corps.
 7. **Charte et logo ?** Défaut : thème `ciceria`, sans logo (voir [themes.md](references/themes.md)). Le logo est un fichier `logo.png` que l'utilisatrice fournit.
@@ -41,6 +112,8 @@ Range le résultat dans un fichier `brief.md` à côté du deck (audience, déci
 **Rien n'est mis en page avant l'accord de l'utilisatrice sur cette liste.**
 
 1. Choisis un squelette dans [squelettes-deck.md](references/squelettes-deck.md) (recommandation, point de trésorerie, budget, comité...) et adapte-le au sujet, sans le recopier.
+Pour une slide isolée, la porte vaut aussi : un titre proposé, validé avant la mise en page.
+
 2. Écris **la liste des titres seuls**, numérotée, un titre par ligne, chaque titre étant la conclusion de la slide avec son chiffre. Ajoute pour chaque ligne, en petit, le graphique envisagé (un mot).
 3. Lue de haut en bas, la liste doit raconter l'argument **sans les graphiques**. Coupe toute slide dont le titre n'avance pas l'argument ; scinde toute slide dont le titre contient « et ». La première slide porte la réponse.
 4. Chaque chiffre d'un titre doit exister dans le registre : sourcé (fichier, date), estimé (E) ou en trou (`gap`). Un titre dont le chiffre est un trou s'écrit autrement : on ne le comble pas.
@@ -78,7 +151,7 @@ Règles de grille, de tailles et de couleurs : [design-system.md](references/des
 
 ### Fabriquer le fichier
 
-Le dossier `tools/` de cette skill contient tout : `lib.js` (thèmes, grille, moves), `deck-data.js` (lecture du registre), `lint-deck.mjs` (relecture), `exemple.js` (deck complet de sept slides à copier comme modèle).
+Le dossier `tools/` de cette skill contient tout : `lib.js` (thèmes, grille, moves), `deck-data.js` (lecture du registre), `lint-deck.mjs` (relecture), `exemple.js` (deck complet de sept slides à copier comme modèle), `demo-ciceria.js` (une analyse dense au niveau attendu, en slide 3).
 
 1. Place-toi dans un dossier de travail et copie-y `tools/` (ou travaille dans `tools/`). Si `require('pptxgenjs')` échoue, lance `npm install pptxgenjs` ; si le réseau est coupé, dis-le et propose de passer par la compétence PowerPoint intégrée en reprenant les mêmes titres et couleurs.
 2. Si l'utilisatrice a fourni un logo, enregistre-le sous le nom `logo.png` dans ce dossier : `L.deck()` le trouve seul.
@@ -98,6 +171,7 @@ Fais cette passe dans l'ordre, même pour un deck que tu n'as pas construit.
 4. **Le rendu.** Regarde les slides : texte qui déborde de sa zone (défaut numéro 1), chevauchements, pied de page qui touche le contenu, colonnes désalignées. Si un outil de rendu existe (LibreOffice : convertir en PDF puis en images), utilise-le et regarde chaque image. Sinon, dis que le rendu n'a pas été vu et demande à l'utilisatrice d'ouvrir le PPTX avant envoi.
 5. **Un chiffre sans source bloque.** Un `sourced` sans fichier, une valeur lue sur une image, un total qui ne se recalcule pas : on ne livre pas avant d'avoir réglé.
 6. **Pas de correction silencieuse.** Chaque correction appliquée est une ligne de la liste, avec l'ancienne et la nouvelle valeur.
+7. **Périmètre du cabinet.** Relis chaque recommandation et chaque prochaine étape contre `profil-cabinet.md` : aucune slide ne promet une prestation hors périmètre, et aucun nom de client, honoraire ou chiffre d'une lettre de mission n'apparaît sans son accord.
 
 ### Ce que tu rends
 

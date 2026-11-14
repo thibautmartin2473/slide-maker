@@ -45,7 +45,13 @@ Plus la demande dit **qui décide quoi** et **quelle est la réponse en une phra
 4. **Le fichier PowerPoint natif**, graphiques modifiables, aux couleurs et polices de la charte.
 5. **Une relecture chiffrée** : titres contre graphiques, unités, périodes, sources, tailles de texte. Vous recevez la **liste des corrections par slide** et une section « Ce que je n'ai pas pu vérifier ». Un chiffre sans source bloque la livraison.
 
-Un exemple complet (PME fictive, 7 slides, mode lecture) est fourni dans `exemple/exemple.pptx`, avec son script `slide-maker/tools/exemple.js`.
+Pour voir ce que la méthode change, ouvrez d'abord `exemple/demo-ciceria.pptx` (3 slides) :
+- un comparatif de Claude sans méthode et de Claude avec slide-maker ;
+- la même prévision de trésorerie faite des deux façons ;
+- une analyse dense au niveau attendu.
+Le script est `slide-maker/tools/demo-ciceria.js`. Un deck complet de 7 slides (PME fictive, mode lecture) est aussi fourni dans `exemple/exemple.pptx`, avec son script `slide-maker/tools/exemple.js`.
+
+Au premier usage, Claude demande votre lettre de mission type, pour connaître l'étendue de vos missions et n'en promettre aucune hors périmètre.
 
 ## Votre charte et votre logo
 
@@ -67,7 +73,7 @@ slide-maker/            le dossier à zipper et importer dans Claude
   SKILL.md              le protocole de la skill
   references/           principes, design system, thèmes, choix du graphique, gestes, plans de deck, forme dense, registre
   tools/                bibliothèque de mise en page, lecture du registre, relecture automatique, exemple
-exemple/                le PPTX d'exemple
+exemple/                les PPTX d'exemple (démo en 3 slides, deck complet) et leurs images
 LICENSE                 MIT
 ```
 

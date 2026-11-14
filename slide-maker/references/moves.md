@@ -1,45 +1,49 @@
 # Les moves : 28 gestes de mise en page, un par question de lecteur
 
-Un **move** est une façon éprouvée de répondre à une question précise du lecteur. On choisit le move par la question (colonne 2), pas par l'esthétique. Chaque slide en utilise un principal. Les fonctions s'appellent depuis `tools/lib.js` : `const L = require('./lib.js')`, puis `L.nomDeLaFonction(ctx, slide, options)`. Quand la colonne « Fonction » est vide, le move se compose avec les primitives (`L.rect`, `L.txt`, `L.line`, `L.pill`, `bars`) en respectant la recette.
+Un **move** est une façon éprouvée de répondre à une question précise du lecteur. On choisit le move par la question (colonne 3), pas par l'esthétique. Chaque slide en utilise un principal. Les fonctions s'appellent depuis `tools/lib.js` : `const L = require('./lib.js')`, puis `L.nomDeLaFonction(ctx, slide, options)`. Quand la colonne « Fonction » est vide, le move se compose avec les primitives (`L.rect`, `L.txt`, `L.line`, `L.pill`, `bars`) en respectant la recette.
+
+Les exhibits d'analyse plus denses (pont par driver, TAM/SAM, cohortes, comparables...) sont des [archétypes](archetypes/catalogue-48-archetypes.md), qui se combinent avec les moves : l'archétype dit quoi montrer et avec quelles données, le move dit comment le rendre fort.
 
 Avant de coder un move : le titre est validé, le chiffre est au registre, la question est écrite.
 
 ## Index
 
-| # | Move | Question du lecteur | Fonction |
-|---|---|---|---|
-| 1 | gris un accent | Lequel compte ? | `grisUnAccent` |
-| 2 | fond fantôme | Qui ressort du lot ? | `fondFantome` |
-| 3 | légende dans le texte | Quelle couleur veut dire quoi ? | `leadRuns`, `md` |
-| 4 | chiffre dans le graphique | Quel est le chiffre de synthèse ? | `medaillon`, `pill` |
-| 5 | panneau de conclusion | Et donc ? | `panneauConclusion`, `verdict` |
-| 6 | ligne de référence | Par rapport à quoi ? | `ligneReference` |
-| 7 | zone de focus | Où sommes-nous ? Qu'est-ce qui est nouveau ? | `zoneFocus` |
-| 8 | table au pas | Qui, combien, quand, pour chaque barre ? | `tableAuPas` |
-| 9 | pastilles au pas | Combien au total, et en % ? | `pastillesAuPas` |
-| 10 | mesure dessinée | De combien, à quel rythme ? | `accolade`, `cote` |
-| 11 | rangée unité | Pourquoi chaque levier ? | `rangeeUnite` |
-| 12 | mise entre parenthèses | Qu'est-ce qui compte dans la conclusion et qu'est-ce qui sert de référence ? | `bracket`, `zoneFocus` |
-| 13 | petits multiples | Toutes les métriques ou tous les cas racontent-ils la même histoire ? | `smallMultiples` |
-| 14 | série annotée | Que s'est-il passé, et quand ? | `serieAnnotee` |
-| 15 | incertitude dessinée | Quelle part est une fourchette ou une estimation ? | `bridgeGroupes` avec `est: true` |
-| 16 | pont à groupes | Quels moteurs, et combien pèse chaque famille ? | `bridgeGroupes` |
-| 17 | fourchette de valeur | Dans quelle fourchette se situe la valeur ? | `footballField` |
-| 18 | cible vers réalisé | La promesse a-t-elle été tenue ? | `cibleRealise` |
-| 19 | chiffres-héros | L'entreprise en N chiffres | `chiffresHeros` |
-| 20 | anneau sobre | Quelle répartition, et combien au total ? | `donutSobre` |
-| 21 | entonnoir encastré | Dans quel ordre de priorité ? | `entonnoir` |
-| 22 | frontière réel et projection | Qu'est-ce qui est acquis, qu'est-ce qui est promis ? | `smallMultiples` (paramètre `split`) |
-| 23 | double mesure | Prix et temps, sans double axe | `bars` + courbe superposée |
-| 24 | superposition de plans | Le contexte suit-il la donnée principale ? | `bars` + courbe au même cadre |
-| 25 | familles foncé clair | Quel sous-ensemble de comparables est pertinent ? | `FAMILIES` + `bars` |
-| 26 | équation de graphiques | Qu'est-ce qui explique le résultat ? | `bars` en mini-graphiques |
-| 27 | matrice à zones | Dans quelle catégorie tombe chacun ? | formes + nuage de points |
-| 28 | tableau-graphique | Quelles variables croise-t-on, où est le cas de base ? | `addTable` + `zoneFocus` |
+| # | Move (fiche) | Question du lecteur | Vu chez | Fonction |
+|---|---|---|---|---|
+| 1 | [gris un accent](moves/gris-un-accent.md) | Lequel compte ? | Bain Luxury Monitor p9 ; Bain PE Roadshow p6 ; Kearney FDI p8, McKinsey NYC p52, Morgan Stanley p28 (un seul bleu), Hermès p32 (orange seul) | `grisUnAccent` |
+| 2 | [fond fantôme](moves/fond-fantome.md) | Qui ressort du lot ? | Kearney FDI 2026 p8 ; JPM Investor Day p17 (heatmap) ; OW AVISTRAT p39 (planche-contact seulement) | `fondFantome` |
+| 3 | [légende dans le texte](moves/legende-dans-le-texte.md) | Quelle couleur veut dire quoi ? | McKinsey Chili p33 ; Bain Lux p23 ; TotalEnergies p15 ; Perella p3, JPM ID p14, LVMH p27, Lazard p8 (bandeaux = couleur des barres) | `leadRuns`, `md` |
+| 4 | [chiffre dans le graphique](moves/kpi-dans-le-graphique.md) | Quel est le chiffre de synthèse ? | Bain Lux p9 ; McKinsey Chili p43 ; TotalEnergies p11 | `medaillon`, `pill` |
+| 5 | [panneau de conclusion](moves/panneau-conclusion.md) | Et donc ? | Bain Lux p23 ; Capgemini p45 ; Bain Lux p17 (bandeau), TotalEnergies p15 (verdict), Danone p21 | `panneauConclusion`, `verdict` |
+| 6 | [ligne de référence](moves/ligne-de-reference.md) | Par rapport à quoi ? | Morgan Stanley p28 ; Goldman Sachs p7 ; Centerview p20 ; Rothschild p27, Evercore p43, Perella p5/p8, Hermès p32 (seuil) | `ligneReference` |
+| 7 | [zone de focus](moves/zone-focus.md) | Où sommes-nous ? Qu'est-ce qui est nouveau ? | JPM p25 ; PJT p18 ; Capgemini p38 | `zoneFocus` |
+| 8 | [table au pas](moves/table-au-pas.md) | Qui, combien, quand, pour chaque barre ? | Morgan Stanley p28 ; JPM p25 ; Bain Lux p23, GS p11/p12, Evercore p28/p43, Rothschild p53 | `tableAuPas` |
+| 9 | [pastilles au pas](moves/pastilles-au-pas.md) | Combien au total, et en % ? | McKinsey Chili p43 ; Lazard p8 ; Rothschild p53 | `pastillesAuPas` |
+| 10 | [mesure dessinée](moves/mesure-dessinee.md) | De combien, à quel rythme ? | McKinsey Chili p33 ; Bain PE p6 ; Capgemini p38 ; TotalEnergies p15 | `accolade`, `cote` |
+| 11 | [rangée unité](moves/rangee-unite.md) | Pourquoi chaque levier ? | McKinsey Chili p33 ; Goldman Sachs p7 ; Bain Lux p34 (planche-contact) | `rangeeUnite` |
+| 12 | [mise entre parenthèses](moves/mise-entre-parentheses.md) | Qu'est-ce qui compte dans la conclusion et qu'est-ce qui sert de référence ? | Goldman Sachs p7 ; Morgan Stanley p28 ; PJT p18 | `bracket`, `zoneFocus` |
+| 13 | [petits multiples](moves/small-multiples.md) | Toutes les métriques ou tous les cas racontent-ils la même histoire ? | Lazard p8 ; OW AVISTRAT p70 ; Bain Lux p31 ; BCG SIA p13 ; Rothschild p27 | `smallMultiples` |
+| 14 | [série annotée](moves/serie-annotee.md) | Que s'est-il passé, et quand ? | Centerview p20 ; Perella p3 ; Bain PE p4 | `serieAnnotee` |
+| 15 | [incertitude dessinée](moves/incertitude-dessinee.md) | Quelle part est une fourchette ou une estimation ? | Capgemini p45 ; Danone p10 ; JPM ID p17 | `bridgeGroupes` avec `est: true` |
+| 16 | [pont à groupes](moves/bridge-a-groupes.md) | Quels moteurs, et combien pèse chaque famille ? | Evercore p29 ; Capgemini p38 | `bridgeGroupes` |
+| 17 | [fourchette de valeur](archetypes/football-field.md) | Dans quelle fourchette se situe la valeur ? | Société Générale (deck Milestone, p. 14) | `footballField` |
+| 18 | [cible vers réalisé](moves/cible-vers-realise.md) | La promesse a-t-elle été tenue ? | Capgemini p7 ; AXA p7 | `cibleRealise` |
+| 19 | [chiffres-héros](moves/chiffres-heros.md) | L'entreprise en N chiffres | Air Liquide p5 ; LVMH p27 ; L'Oréal p2 ; Hermès p2 ; McK NYC p52 | `chiffresHeros` |
+| 20 | [anneau sobre](moves/donut-sobre.md) | Quelle répartition, et combien au total ? | LVMH p27 ; TotalEnergies p11 ; GS ID p126 | `donutSobre` |
+| 21 | [entonnoir encastré](moves/entonnoir-encastre.md) | Dans quel ordre de priorité ? | JPM Investor Day 2025 p14 | `entonnoir` |
+| 22 | [frontière réel et projection](moves/frontiere-reel-projection.md) | Qu'est-ce qui est acquis, qu'est-ce qui est promis ? | Lazard p8 ; Danone CME p10 ; GS p8, Centerview p11, Perella p4 (planches-contacts) | `smallMultiples` (paramètre `split`) |
+| 23 | [double mesure](moves/double-mesure.md) | Prix et temps, sans double axe | OW AVISTRAT p70 ; Bain Lux p31 ; TotalEnergies p15 | `bars` + courbe superposée |
+| 24 | [superposition de plans](moves/superposition-de-plans.md) | Le contexte suit-il la donnée principale ? | Rothschild p53 ; Bain PE p4 ; TotalEnergies p15 | `bars` + courbe au même cadre |
+| 25 | [familles foncé clair](moves/familles-fonce-clair.md) | Quel sous-ensemble de comparables est pertinent ? | Rothschild p27 ; Kearney p8 | `FAMILIES` + `bars` |
+| 26 | [équation de graphiques](moves/equation-de-graphiques.md) | Qu'est-ce qui explique le résultat ? | Danone IR 2024 p21 ; AXA p11/p32 (bloc + bloc, planche-contact) | `bars` en mini-graphiques |
+| 27 | [matrice à zones](moves/matrice-a-zones.md) | Dans quelle catégorie tombe chacun ? | Roland Berger Trend Compendium p19 | formes + nuage de points |
+| 28 | [tableau-graphique](moves/tableau-graphique.md) | Quelles variables croise-t-on, où est le cas de base ? | PJT p18 ; JPM p17 ; Danone p15 ; OW p65 | `addTable` + `zoneFocus` |
 
-Le relief sans ombre (chevauchement : un élément à cheval sur une frontière) n'est pas un move mais une habitude : ordre de création du fond vers l'avant, `rect`, `txt` avec fond, `medaillon`.
+Le relief sans ombre ([chevauchement](moves/chevauchement.md) : un élément à cheval sur une frontière) n'est pas un move mais une habitude : ordre de création du fond vers l'avant, `rect`, `txt` avec fond, `medaillon`.
 
 ## Fiches
+
+Résumés en une ligne ; la fiche complète de chaque move (question servie, pourquoi ça paraît évident, anatomie, layering, recette pptxgenjs, variantes, vu chez, rendu paysage et portrait) est dans [moves/](moves/), un fichier par move, liée dans la colonne « Move » de l'index.
 
 **1. Gris un accent.** Toutes les barres en gris, une seule en accent : celle du message. Variante : dégradé du clair au foncé pour coder le temps. Recette : `L.grisUnAccent(ctx, s, { box, labels, values, accent: [indice], max, fmt })` ; rend la zone de tracé et des fonctions de position (`x(i)`, `top(i)`) pour poser du texte dessus. Piège : fixer `max`.
 

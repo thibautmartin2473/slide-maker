@@ -1,13 +1,24 @@
-# Squelettes de deck
+# Squelettes de deck (cinq du pack Riplo, rattachés aux fonds, plus deux squelettes d'entreprise)
 
-Points de départ pour le **plan de titres**, pas des gabarits à remplir : couper toute slide qui n'avance pas l'argument. Pour chaque ligne, écrire un titre-conclusion avec son chiffre.
+Points de départ pour le **plan de titres**, pas des gabarits à remplir : couper toute slide qui n'avance pas l'argument. Pour chaque ligne, écrire un titre-conclusion avec son chiffre. Les cinq squelettes de conseil sont repris du pack gratuit de Riplo (2026-10-29) et rattachés aux **fonds** de [fonds/](fonds/) (le fond donne le plan détaillé et les archétypes ; le squelette ci-dessous sert de contrôle de l'ordre et de la première slide).
+
+| Squelette | Fond le plus proche | Remarque |
+|---|---|---|
+| 1. Deck de recommandation (défaut) | [point-de-vue](fonds/point-de-vue.md), [case-conseil](fonds/case-conseil.md) | |
+| 2. Rapport au conseil ou au comité de direction | [investor-relations](fonds/investor-relations.md), [diagnostic](fonds/diagnostic.md) | écart au plan par moteur = move [bridge-a-groupes](moves/bridge-a-groupes.md) |
+| 3. Point mensuel de trésorerie (dirigeant) | aucun (squelette d'entreprise) | pont de variation = move [bridge-a-groupes](moves/bridge-a-groupes.md), seuil = move [ligne-de-reference](moves/ligne-de-reference.md) |
+| 4. Présentation de budget à un comité | aucun (squelette d'entreprise) | réalisé contre budget = move [cible-vers-realise](moves/cible-vers-realise.md) |
+| 5. Dossier de séance de travail | [programme-transformation](fonds/programme-transformation.md), [diagnostic](fonds/diagnostic.md) | |
+| 6. Conclusions d'une analyse commerciale ou d'un diagnostic (due diligence commerciale) | [etude-de-marche](fonds/etude-de-marche.md), [etude-commanditee](fonds/etude-commanditee.md) | taille de marché bottom-up et top-down côte à côte |
+| 7. Dossier de présentation d'investissement (screener de comité d'investissement) | [business-case-options](fonds/business-case-options.md) (il recommande ; l'[information-memorandum](fonds/information-memorandum.md) ne recommande rien) | trois leviers de création de valeur = move [rangee-unite](moves/rangee-unite.md) |
+| (selon l'ancrage) pitch vendeur | [sell-side-pitch](fonds/sell-side-pitch.md) | squelette propre à ce fond, pas dans le pack Riplo |
 
 ## Règles communes
 
-- **La première slide porte la réponse.** Pas de révélation finale : le dirigeant ou le comité lit d'abord la recommandation, puis les preuves.
+- **La première slide porte la réponse.** Pas de révélation finale : le dirigeant ou le comité lit d'abord la recommandation, puis les preuves. Exception : l'étude commanditée opposable (fond [etude-commanditee](fonds/etude-commanditee.md)) pose la méthode et le contrat de lecture (slides 3-4) avant la synthèse en messages (slide 5), parce que le document doit résister à la contestation du commanditaire.
 - Ce qui soutient sans faire avancer va en **annexe** (annexe longue, corps court).
-- Une section d'une seule slide n'est pas une section.
-- Chaque slide de contenu : un titre-conclusion, son chiffre au registre, sa source en pied.
+- **Une section d'une seule slide n'est pas une section.**
+- Chaque slide de contenu : un titre-conclusion avec son chiffre, au registre (`deck.data.json`, voir [registre-preuves.md](registre-preuves.md)), source en pied.
 - Entre 6 et 12 slides pour le corps d'un point mensuel ou d'un comité ; au-delà, scinder en deux documents.
 
 ## 1. Recommandation (squelette par défaut)
@@ -58,22 +69,22 @@ Points de départ pour le **plan de titres**, pas des gabarits à remplir : coup
 5. Les options, arbitrages explicites
 6. Prochaines étapes, responsables, dates
 
-## 6. Conclusions d'une analyse commerciale ou d'un diagnostic
+## 6. Conclusions d'une analyse commerciale ou d'un diagnostic (conclusions de due diligence commerciale)
 
 1. Verdict en tête et niveau de confiance
-2. Taille et structure du marché (méthode par le bas et par le haut, côte à côte)
+2. Taille de marché : top-down et bottom-up côte à côte
 3. Moteurs de croissance et leurs preuves
 4. Position concurrentielle notée contre des critères annoncés
-5. Preuves clients : rétention, concentration
+5. Preuves clients : rétention, cohortes, concentration
 6. Risques pour la thèse
-7. Implications et décision
+7. Implications pour l'opération (implications et décision)
 
-## 7. Dossier de présentation d'investissement
+## 7. Dossier de présentation d'investissement (screener de comité d'investissement)
 
-1. L'opportunité en une page : quoi, taille, pourquoi
+1. L'opportunité en une page : quoi, taille, pourquoi nous
 2. Marché : taille, croissance, structure
-3. L'entreprise : ce qu'elle fait et comment elle gagne de l'argent
+3. Société : ce qu'elle fait et comment elle gagne de l'argent
 4. Profil financier et leviers clés
 5. La thèse : trois leviers de création de valeur
-6. Risques clés et vérifications qui les lèveraient
-7. Calendrier et demande
+6. Risques clés et les diligences qui les lèveraient
+7. Processus, calendrier et demande

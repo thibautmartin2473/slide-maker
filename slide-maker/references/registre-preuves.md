@@ -34,6 +34,11 @@ Un fichier `mon-deck.data.json`, rangé à côté du PPTX, liste **chaque chiffr
 | `verifie` | `{par, le}` une fois la valeur relue contre le fichier source par un humain. Sinon le rapport la liste dans « non vérifié ». |
 | `dansTitre`, `decimales` | Le chiffre est cité dans le titre ; arrondi d'affichage. |
 
+Trois cas fréquents :
+- **une prévision lue dans un fichier** (prévision de trésorerie, budget) est `sourced` : le fichier est la source, et la note de la slide dit « prévision ». `E` est réservé aux chiffres que Claude calcule ou suppose, avec leur `hypothese` ;
+- **une source sans fichier** (l'utilisatrice donne le libellé seulement) : `fichier` vaut « transmis par l'utilisatrice ». On n'invente jamais un nom de fichier ;
+- **une date dans un titre** s'écrit en mots (« fin décembre », « début janvier ») : le linter lit « 04/01 » comme deux nombres à justifier.
+
 Une slide peut porter `type` : `couverture`, `sommaire`, `intercalaire`, `fin` (exemptées de source, de période et d'unité) ou `contenu` (défaut). `parametres.mode` vaut `lecture` (texte courant 10 pt minimum) ou `projete` (14 pt) ; `verifierFichiers: true` demande en plus que les fichiers sources existent à côté du registre.
 
 ## Dans le script du deck

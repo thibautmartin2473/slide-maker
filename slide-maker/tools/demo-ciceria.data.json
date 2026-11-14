@@ -1,0 +1,334 @@
+{
+  "deck": "demo-ciceria",
+  "slides": [
+    {
+      "n": 1,
+      "id": "s1",
+      "type": "contenu",
+      "titre": "Ce que change slide-maker : Claude ne met plus des chiffres en forme, il construit un argument qu'un dirigeant peut trancher",
+      "chiffres": []
+    },
+    {
+      "n": 2,
+      "id": "s2",
+      "type": "contenu",
+      "titre": "Mêmes chiffres, autre slide : le titre tranche, les encarts expliquent le creux, la recommandation chiffre la décision",
+      "chiffres": []
+    },
+    {
+      "n": 3,
+      "id": "s3",
+      "type": "contenu",
+      "titre": "Creux de janvier : tirer 80 k€ de ligne court terme couvre les sorties de fin d'année, même si le premier client paie en retard",
+      "chiffres": [
+        {
+          "id": "w01",
+          "valeur": 412,
+          "unite": "k€",
+          "periode": "16/11",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w02",
+          "valeur": 388,
+          "unite": "k€",
+          "periode": "23/11",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w03",
+          "valeur": 351,
+          "unite": "k€",
+          "periode": "30/11",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w04",
+          "valeur": 300,
+          "unite": "k€",
+          "periode": "07/12",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w05",
+          "valeur": 262,
+          "unite": "k€",
+          "periode": "14/12",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w06",
+          "valeur": 198,
+          "unite": "k€",
+          "periode": "21/12",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w07",
+          "valeur": 141,
+          "unite": "k€",
+          "periode": "28/12",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w08",
+          "valeur": 118,
+          "unite": "k€",
+          "periode": "04/01",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w09",
+          "valeur": 134,
+          "unite": "k€",
+          "periode": "11/01",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w10",
+          "valeur": 171,
+          "unite": "k€",
+          "periode": "18/01",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w11",
+          "valeur": 205,
+          "unite": "k€",
+          "periode": "25/01",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w12",
+          "valeur": 236,
+          "unite": "k€",
+          "periode": "01/02",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "w13",
+          "valeur": 268,
+          "unite": "k€",
+          "periode": "08/02",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "seuil",
+          "valeur": 150,
+          "unite": "k€",
+          "periode": "2026-2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "ligne",
+          "valeur": 80,
+          "unite": "k€",
+          "periode": "18/12/2026 au 18/01/2027",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "dansTitre": true
+        },
+        {
+          "id": "tva",
+          "valeur": 58,
+          "unite": "k€",
+          "periode": "19/12/2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "treize",
+          "valeur": 46,
+          "unite": "k€",
+          "periode": "24/12/2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "emprunt",
+          "valeur": 31,
+          "unite": "k€",
+          "periode": "04/01",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "total3",
+          "valeur": 135,
+          "unite": "k€",
+          "periode": "décembre 2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "calcul": "tva+treize+emprunt"
+        },
+        {
+          "id": "brenac",
+          "valeur": 60,
+          "unite": "k€",
+          "periode": "semaine du 04/01",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "bas_retard",
+          "valeur": 74,
+          "unite": "k€",
+          "periode": "11/01",
+          "statut": "E",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "hypothese": "Brenac paie à 60 jours au lieu de 45 : 134 - 60"
+        },
+        {
+          "id": "besoin",
+          "valeur": 32,
+          "unite": "k€",
+          "periode": "04/01",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "calcul": "seuil-w08"
+        },
+        {
+          "id": "besoin_retard",
+          "valeur": 76,
+          "unite": "k€",
+          "periode": "11/01",
+          "statut": "E",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "hypothese": "150 - 74"
+        },
+        {
+          "id": "autorise",
+          "valeur": 100,
+          "unite": "k€",
+          "periode": "2026",
+          "statut": "sourced",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          }
+        },
+        {
+          "id": "interets",
+          "valeur": 0.3,
+          "unite": "k€",
+          "periode": "18/12/2026 au 18/01/2027",
+          "statut": "E",
+          "source": {
+            "libelle": "Prévision de trésorerie Atelier Gardelle du 13/11/2026, échéancier d'emprunt, balance âgée clients au 31/10/2026 (chiffres fictifs)",
+            "fichier": "transmis par l'utilisatrice",
+            "date": "2026-11-13"
+          },
+          "hypothese": "80 k€ x 4,5 % x 31/365",
+          "decimales": 1
+        }
+      ]
+    }
+  ]
+}
